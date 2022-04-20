@@ -1,0 +1,907 @@
+[
+  {
+    "Application Hardening": {
+      "Definition": "Application Hardening makes an executable application more resilient to a class of exploits which either introduce new code or execute unwanted existing code. These techniques may be applied at compile-time or on an application binary.",
+      "Technique Overview": " Exploits may, for example, rely on knowledge of addresses in a process's memory, they may alter memory contents, and they may cause a program to use instructions in a way that they were not intended.  By, for example, including code that dynamically changes the memory address of data or code on each run, introducing logic to validating the memory contents before certain potentially dangerous flows are executed, or monitoring a program for unusual sequence of instructions, this makes it harder for an attacker to craft a working exploit."
+    }
+  },
+  {
+    "Application Configuration Hardening": {
+      "Definition": "Modifying an application's configuration to reduce its attack surface. \n",
+      "How it works": " Application configuration settings, can be configured to limit the permissions on an application or disable certain vulnerable application features. Hardening an application's configuration involves analyzing not only the application but also the environment in which the application is run in for potential vulnerabilities. ",
+      "Considerations": " \nApplication configurations maybe to be maintained as part of a\n"
+    }
+  },
+  {
+    "Dead Code Elimination": {
+      "Definition": "Removing unreachable or \"dead code\" from compiled source code. \n",
+      "How it works": " Dead code is code that is considered unreachable by normal program execution. Dead code can be created by adding code under a condition that never evaluates to true. Dead code should be removed since this type of code can produce unexpected results, if accidentally or maliciously forced to execute. Dead code identification is typically performed by algorithms that implement program flows analysis looking for unreachable code. The dead code is eliminated by instructing compilers to remove the code through compiler flags, i.e., '-fdce' is used for Dead Code Elimination.",
+      "Considerations": " Code can also be deemed unreachable for certain run-time conditions. Different deployed systems and environments may contain some code that is unreachable for the given environment. This technique does not consider run-time conditions for unreachable code."
+    }
+  },
+  {
+    "Exception Handler Pointer Validation": {
+      "Definition": "Validates that a referenced exception handler pointer is a valid exception handler.",
+      "How It Works": " When a process encounters an exception, it calls an exception handler to deal with the exception.  The method by which this exception handler is determined varies by the operating system.  The exception handler is called, even if it is the default exception handler to terminate the program and display a message that the program stopped working.  In the case that no valid exception handler is found, the program would fail to proceed as normal and could be programmed to terminate. In Windows, the address of the exception registration record is stored at the very start of the the Thread Information Block; the GS register points to this structure. The exception registration record contains two pointers: a pointer to the next exception registration record should this handler fail to handle the exception, and a pointer to the handler. A buffer overflow can overwrite the saved return pointer with an invalid location to execute memory; this often triggers the exception handler chain, which could also be corrupted by the buffer overflow.  Although Process Exception Handler Validation does not make sure that the exception handler pointer or the code at the exception handler was unaltered, or that the exception handler code is secure, this technique does ensure that the pointer is at least an exception handler that could be called by the program. With Process Exception Handler Validation, before the handler is called, it checks the exception handler against a source of valid exception handlers.  If the requested handler is not in this list, other techniques such as those in Process Eviction might be invoked, such as Process Termination to end the current process, or Executable Blacklisting to blacklist the potentially vulnerable or malfunctioning executable. The source of valid exception handlers could be generated at runtime, with the risk of the information that is used to determine the validity of exception handlers being compromised.   The source of valid exception handlers could also be generated at compile time or as a binary patch.  Given the source code, it would be rather straightforward to find the exceptions, as they are pointed in the catch statement of a try-catch clause and the compiler must already generate the code to call exceptions from this.",
+      "Considerations": " If the program file can be altered by the attacker, then the security could be bypassed by replacing it with any desired program, without even bypassing SEH. If the attacker was already able to overwrite the code for a valid exception handler via other functionality in the program, this defense would not prevent arbitrary code execution.\nIf an exception handler recognized as valid is vulnerable, it would be executed anyway. SafeSEH might be applied only to some executable files or modules, allowing an attacker to call any piece of code as an exception handler in the unprotected modules."
+    }
+  },
+  {
+    "Pointer Authentication": {
+      "Definition": "Comparing the cryptographic hash or derivative of a pointer's value to an expected value. \n",
+      "How It Works": " Pointer Authentication (frequently referred to as PAC, although the technique is properly Pointer Authentication) is a security feature to provide protection against attackers with memory read/write access.  A Pointer Authentication Code (PAC) is a cryptographic hash or derivative computed on the value of a pointer and some additional context information which can then provide a cryptographically strong guarantee about the likelihood that a pointer has been tampered with by an attacker.  Although pointers are 64 bits, most systems have a substantially smaller virtual address space, leaving unused bits in pointers that can store the value of the PAC, this can be done to reduce memory space requirements. One implementation is in ARMv8.3-A.  A PAC is computed over the 64-bit pointer value and a 64-bit context value.  Instructions are introduced to deal with pointers: one category to compute and insert the PAC into a pointer, another category to verify the pointer and invalidate the pointer if the PAC does not check, and a third category to remove the pointer and restore the original value without verifying. The ARM standard specifies a cryptographic algorithm called QARMA-64 (designed by Qualcomm) to compute the signature, although this algorithm is not required.  The architecture provides for five secret 128-bit Pointer Authentication keys: two for instruction pointers, two for data pointers, and a general key for signing larger blocks of data.",
+      "Considerations": " In the ARM implementation, the mechanisms above for manipulating PACS are provided, but it is up to the code developer to manage the keys for the cryptographic algorithm. A known potential limitation of PACs concerns signing gadgets. Under certain circumstances PACs can be bypassed by forcing the system to run a signing gadget which will allow the signing of arbitrary pointers to occur."
+    }
+  },
+  {
+    "Process Segment Execution Prevention": {
+      "Definition": "Preventing execution of any address in a memory region other than the code segment.",
+      "How it works": " During execution of a process, the instruction pointer register should only point to addresses in a code segment (also called the .text segment), as this is the sole segment which should contain program code. When this technique detects an attempt to execute something that has been designated as non-executable, other techniques such as those in Process Eviction might be invoked, such as Process Termination to end the current process, or Executable Blacklisting to blacklist the potentially vulnerable or malfunctioning executable. The software-based implementation in Windows XP SP2 might not check that every time the instruction pointer is changed, and does not check on each jump or return.  Before calling an exception handler, Windows XP SP2 software-enforced DEP checks whether the exception handler is located in a memory region marked as executable.  If the program was also built with SafeSEH, this implementation also checks before changing control to the exception handler whether it is a registered exception handler in the program's file on disk. The NX (No Execute) or XD (Execute Disable) bit on the processor specifies whether a certain part of memory is executable.  Early implementations set this bit by the memory segment, while modern implementations which are built on the flat memory model often store this bit in each entry of the page table, to control execution by the page.",
+      "Considerations": " Non-hardware process data segment execution prevention is more susceptible to being able to be turned off for a page of memory. Different implementations of this defense have been in place since the 1980s, but implementation stalled when larger 16-bit programs began stuffing code in the segments usually reserved for data. Many modern programs follow the best practice of separation of code and data, are able to run under this defense. ROP or ret2libc/return-to-function attacks could bypass this defense, as although they may pass attacker-controlled data or stack frames to a function, they abuse functions that are legitimately located in the .text segment (code segment) of the program.  For those, more advanced defenses such as a table of valid jump addresses, function call analysis, or return depth analysis could be used."
+    }
+  },
+  {
+    "Segment Address Offset Randomization": {
+      "Definition": "Randomizing the base (start) address of one or more segments of memory during the initialization of a process.",
+      "How it works": " Many application exploits rely on an attacker specifying a location in memory, which points to data or code used by the attacker.  If the addresses are changed each time the program is run, then it becomes more difficult for the attacker to determine the location that will contain the code they wish to run. Imported modules may be similarly realigned if their default memory addresses conflict with other modules, in a process known as \"rebasing.\"  Just as not all code is built for participation in ASLR, not all modules can be rebased; instead, modules must indicate whether they implement support for rebasing.  Such information to relocate the executable is typically stored in the \".reloc\" segment -- each of the addresses pointed to in this segment has its address increased by the amount of the offset.\n(An alternative method for relocation would be to add an amount to a global variable each time -- leading to less overhead in the module load, but more for each access.  Still another implementation could instead contain code to deference each changeable memory location on the fly, so that each of the references do not need to be updated.",
+      "Considerations": " As the offset for each segment is constant, it is possible to guess at the value of the address given the address of another variable.  Alternatively, memory pointers may be kept around, which contain the address of another variable.\nAnother bypass technique is known as an \"egg hunt,\" whereby the attacker searches for a rather unique piece of the data or code in memory to determine its likely address. The program needs to store these addresses for the functions somewhere.  In Linux, the PLT contains a \"trampoline\" to these addresses.  If an attacker desires to jump to the start of an existing function, they can jump directly to the trampoline anyway, and may have the opportunity to provide their own stack frame to the function with a write to the stack. If they overwrite a saved stack pointer which is loaded back into memory, or execute a function, that changes the address of a stack pointer. If an attacker wants to inject some data into the program, for example as a parameter to a known function that is not under ASLR or a pointer to a trampoline function in the PLT, then they can repeat the data until they exceed the range of ASLR coverage, which on 32-bit systems is accomplishable in a few seconds with a heap spray.  Microsoft's EMET and Windows 10 Exploit Guard can pre-allocate particular addresses that are commonly used in heap sprays.  However, in many products, there does not seem to be nearly a complete coverage of such addresses, which only need to be executable and in the range of the heap; 0x0c0c0c0c is such an address that is commonly used for the x86 processor architecture, as when executed it only performs a numeric operation to a register four times."
+    }
+  },
+  {
+    "Stack Frame Canary Validation": {
+      "Definition": "Comparing a value stored in a stack frame with a known good value in order to prevent or detect a memory segment overwrite. \n",
+      "How it works": " This defense must be applied at compile-time, or via a patch to the program binary.  Stack Frame Canary Verification inserts instructions at the prologue and epilogue of desired functions.  In the prologue, a canary value, typically with the same size as the register size, is stored in the system of record and on the stack.  Typically, the canary is loaded to where it has a memory address just below that of the saved instruction pointer and base pointer.  In the epilogue, the canary value stored on the stack and, is compared to the canary value in the system of record.  If the values are different, other techniques such as those in Process Eviction might be invoked, such as Process Termination to end the current process, or Executable Blacklisting to blacklist the potentially vulnerable or malfunctioning executable. Stack Frame Canary Verification is commonly used to detect potential tampering of a saved register value on the stack before it has been restored.  Examples of registers with values commonly saved to the stack include the instruction pointer and the base pointer. The canary should be stored between where the start of a buffer overrun is likely, and the data to protect, in cases where the buffer size increases it will overwrite the data to be protected. On most processor architectures, including x86, x64, and ARM, a \"push\" operation to store data to the stack grows the stack towards a lower memory address.  As in these architectures, saved register values are stored to the stack at a point in time just before space is made for the local function variables, the saved register values have a higher address than that of the local function variables.  Values at increasing indexes of a buffer are written to increasing memory addresses; therefore, an overwrite in the local variable buffer could overwrite saved register values, and a stack canary between these two would be useful in detecting an overwrite. On some other processor architectures such as the B5000, the stack grows towards increasing memory addresses, and some architectures, such as System Z and RCA1802A, stack direction can be chosen.  If the stack grows towards increasing memory addresses, while this architecture inherently provides more protection against a saved register being overwritten, other data including local function variables might be overwritten.",
+      "Considerations": " There are several ways that the protection provided by a canary could be rendered ineffective. If the attacker alters the memory in such a way that it performs a malicious action before the epilogue is called, then this protection will not be effective.  This includes altering the logic of the program by altering the values of local variables stored on the function stack, or by causing an exception and exploiting the exception mechanism such as the SEH (Structured Exception Handling) mechanism on Windows. Determining the canary value is possible through reading memory either for the code used to check the canary, or from the stored canary value itself in a stack frame. A vulnerability such as a write-what-where condition that allows one to write data after the canary in the stack, would allow control of the value of the saved instruction pointer without needing to know the canary value."
+    }
+  },
+  {
+    "Credential Hardening": {
+      "Definition": "Credential Hardening techniques modify system or network properties in order to protect system or network/domain credentials. \n"
+    }
+  },
+  {
+    "Biometric Authentication": {
+      "Definition": "Using biological measures in order to authenticate a user. \n"
+    }
+  },
+  {
+    "Certificate-based Authentication": {
+      "Definition": "Requiring a digital certificate in order to authenticate a user. \n"
+    }
+  },
+  {
+    "Certificate Pinning": {
+      "Definition": "Persisting either a server's X509 certificate or their public key and comparing that to server's presented identity to allow for greater client confidence in the remote server's identity for SSL connections. \n",
+      "How it works": " Pinning allows for a trusted copy of a certificate or public key to be associated with a server and thus reducing the likelihood of frequently visited sites being subjected to man-in-the-middle attacks. Certificates or public keys can be pinned after a trusted connection has been established or the pinning can be preloaded in an application, which is the preferred method for mobile applications. Pinning can take the form of certificate pinning or public key pinning.",
+      "Forms of Pinning": " \nCertificate Pinning\nCertificate Pinning (CP) allows for the client to verify the X509 certificate with a preloaded certificate. Typically, this is involves storing a hash of the certificate and using the stored hash for comparison to the hash of the certificate submitted during the SSL handshake.\n\nPublic Key Pinning\nPublic Key Pinning (PKP) requires the extraction of a public key from server's certificate. The stored public key is compared to the server's presented public key. A public key is expected to rotate less frequently than an X509 certificate and is generally favored over certificate pinning.\n\n An extension of PKP is Subject Public Key Information Pinning (SPKI) includes public key pinning plus additional information for SSL connections. The additional information can include preferred algorithms.",
+      "Considerations": " \nWith pinned certificates whenever a server updates its certificate, the pinned certificates will also need to be updated\nWith pinned public keys the extracted key may be subject to key refresh policies but much less frequently\nWebsites can become unavailable if pinned objects are set and not updated with the rotated identities. This may require a pinning strategy to be developed.\n"
+    }
+  },
+  {
+    "Credential Transmission Scoping": {
+      "Definition": "Limiting the transmission of a credential to a scoped set of relying parties."
+    }
+  },
+  {
+    "Domain Trust Policy": {
+      "Definition": "Restricting inter-domain trust by modifying domain configuration. \n"
+    }
+  },
+  {
+    "Multi-factor Authentication": {
+      "Definition": "Requiring proof of two or more pieces of evidence in order to authenticate a user. \n",
+      "How it works": " When logging into an account users present two or more credentials that fall into different categories: something you know (password or PIN), something you have (smart card or phone), or something you are (fingerprint).",
+      "Considerations": " MFA configuration steps may vary across accounts and in some cases left up to users to activate and implement."
+    }
+  },
+  {
+    "One-time Password": {
+      "Definition": "A one-time password is valid for only one user authentication.",
+      "How it works": " When a user initiates authentication, they are asked for a one-time password, often in addition to other credentials such as a traditional password or smart card. The one-time password may be from a list provided in advance, sent via a channel such as SMS or HTTPS to an app, or a generated token. In the case of a physical token which generates one-time passwords incrementally based on time elapsed, that token device need not be connected to the internet. In different implementations, an administrator of the system, or a user with additional verification, can adjust for clock skew between the token and the verification system as needed.",
+      "Considerations": " \nSIM Swapping\nSecure token visual compromise\nInsecure delivery channel\n Physical loss of One-time Password device. These are often provided in the form of a downloadable document with a regular name, which can be searched for in the case that the user forgets where they put them.  This digital file or printed document could be stolen.\nAdditionally, after the code file is printed, it could be recovered from the system printer spool unless the spooler cache is cleared."
+    }
+  },
+  {
+    "Strong Password Policy": {
+      "Definition": "Modifying system configuration to increase password strength. \n",
+      "How it works": " Password strength guidelines include increasing password length, permitting passwords that contain ASCII or Unicode characters, and requiring systems to screen new passwords against lists of commonly used or compromised passwords.",
+      "Considerations": " Extremely complex password requirements may lead users to saving passwords in text files or picking obvious passwords that meet the policy."
+    }
+  },
+  {
+    "User Account Permissions": {
+      "Definition": "Restricting a user account's access to resources. \n"
+    }
+  },
+  {
+    "Message Hardening": {
+      "Definition": "Email or Messaging Hardening includes measures taken to ensure the confidentiality and integrity of user to user computer messages."
+    }
+  },
+  {
+    "Message Authentication": {
+      "Definition": "Authenticating the sender of a message and ensuring message integrity. \n",
+      "How it works": " Digital signatures are used to verifying a message is from the expected sender. In email, Secure/Multipurpose Internet Mail Extensions (S/MIME) protocol is typically used to digitally sign messages. A hash value of the sender's message is created and encrypted with the sender's private key to create a digital signature. The message and the digital signature are sent to the recipient where the sender's public key is used to decrypt the digital signature and compute the hash of the message. The computed hash is compared with the hash from the received message, and any difference in the hash values signify the message did not originate from the sender and has been alerted in transit. MAC is a fixed size string that is appended to a message to provide message authentication and integrity. The sender MAC signing algorithm takes as input a secret symmetric key shared between sender and recipient and the message to calculate a short tag that is appended to the message. The recipient receives the message with the appended tag, and a MAC verification algorithm is run using the symmetric key to verify the message came from the stated sender and ensure the message has not been tampered with. ",
+      "Considerations": " \nPublic keys associated with digital signatures should be verified by a Certification Authority (CA) to prevent impersonation. The CA verifies the owner of a public key and puts the sender's identity and public key into a certificate that is signed by the CA.\nDigital signatures provide non-repudiation where a third party can verify the authenticity of the message using the sender's digital certificate signed by the CA.\nSymmetric keys must be exchanged securely via a private channel and management of new symmetric keys are needed for each pair of participants wishing to exchange messages.\n"
+    }
+  },
+  {
+    "Message Encryption": {
+      "Definition": "Encrypting a message body using a cryptographic key. \n",
+      "How it works": " Asymmetric encryption is typically accomplished using public and private key certificates based on the X.509 standard. The sender encrypts messages using the recipient's public key and the receipt decrypts the message using their private key. Standards that can be used to implement message encryption include S/MIME (Secure/Multipurpose Internet Mail Extensions) and PGP. Symmetric encryption uses the same cryptographic key by both the sender and receiver to encrypt and decrypt a message. Asymmetric key exchange protocols such as Diffie-Hellman can be used to share the cryptographic key with the recipient.",
+      "Considerations": " \nSeparate configuration settings to enable message encryption are often needed for each messenger client (e.g. webmail, desktop client, mobile).\nContinuous monitoring to ensure private keys are not compromised and the certificate authority (CA) is trusted.\nSecure transfer of private keys between multiple devices.\n"
+    }
+  },
+  {
+    "Transfer Agent Authentication": {
+      "Definition": "Validating that server components of a messaging infrastructure are authorized to send a particular message. \n",
+      "How it works": " Transfer Agent Authentication can be accomplished in different ways for depending on the protocol. In Email,  Sender Policy Framework (SPF), Domain Key Identified Email (DKIM) or Domain-based Message Authentication Reporting and Conformance (DMARC) to validate sender domain ownership. SPF protocol allows for mail domain owners to specify the mail servers they use when sending email. SPF requires the use of SPF records published in the Domain Name System (DNS). The records record the authorized IPs for email senders. SPF uses the return-path address for domain IP identification. Email that is forwarded may cause the return-path validation problems. DKIM also uses a record entry in DNS for authentication but does not rely on the simple return-path for validation. A signature header is added to email and encryption is used for security. This adds an additional layer of complexity and requires that DKIM servers be configured identified cryptographic signatures. The additional complexity results in a validation process that can survive complex routing of emails. DMARC is an email policy and authentication protocol that seeks to ensure that the \"From\" field of emails is not spoofed. DMARC makes use of both SPF records and DKIM published key validation. DMARC also has a decision policy framework, contained in a DMARC record, for handling of rejected email. The DMARC framework also updates DMARC domains with authentication statues for allowed senders of that domain.",
+      "Considerations": " \nAdditional work is required to ensure that all SPF, DKIM and DMARC records are current and up to date. \nMaintenance of DKIM signing keys is needed. \nUsing SPF without DKIM and DMARC verifies the Return-Path domain however does not prevent spoofing of the displayed From: address. \nParts of an email that are not signed or verified by email authentication methods, such as the message body or the header To: and Subject: fields, can be altered or modified. \nEmail message authentication does not replace the need to do email content analysis since executables, attachments, or links or other parts of the email beyond the sender domain are not verified.\n"
+    }
+  },
+  {
+    "Platform Hardening": {
+      "Definition": "Hardening components of a Platform with the intention of making them more difficult to exploit. \n Platforms includes components such as: \n \nBIOS UEFI Subsystems\nHardware security devices such as Trusted Platform Modules\nBoot process logic or code\nKernel software components\n \n"
+    }
+  },
+  {
+    "Bootloader Authentication": {
+      "Definition": "Cryptographically authenticating the bootloader software before system boot."
+    }
+  },
+  {
+    "Disk Encryption": {
+      "Definition": "Encrypting a hard disk partition to prevent cleartext access to a file system. \n"
+    }
+  },
+  {
+    "Driver Load Integrity Checking": {
+      "Definition": "Ensuring the integrity of drivers loaded during initialization of the operating system. \n",
+      "How it works": " This technique can be accomplished in a number of ways: \nA kernel level security agent installed on a host machine ensures that the driver associated with the agent is first in the initialization order. A dependent DLL associated with the driver is configured to be processed before other dependent DLLs and executes a number of operations to ensure the driver associated with the security agent is initialized first.\n\nKernel components can be signed by a certificate obtained by a third party to verify the source of the component and whether it has been modified. When signed, the component will include a signature block implemented as a hash value of the component header and can also include a certificate chain. The signature and certificate data are typically added before the kernel component is distributed to the public. \n\n",
+      "Considerations": " \nThe private keys to sign certificates as reputable companies have been stolen in the past -- in cases such as where certificates from Adobe, Realtek, and JMicron have been used to sign malicious executables. (Source: https://resources.infosecinstitute.com/cybercrime-exploits-digital-certificates/#gref)\n\nTrusted Root Certificate Authorities have been compromised, yielding the ability to use the compromised keys to generate certificates with an arbitrary company name.\n\nIt may not be difficult for an attacker to start an organization which can obtain a signed certificate.\n\nA root certificate authority (CA) whose certificate is trusted in the verification logic could generate incorrect certificates, if they are lax or have ulterior motives.\n\n"
+    }
+  },
+  {
+    "File Encryption": {
+      "Definition": "Encrypting a file using a cryptographic key. \n",
+      "How it Works": " Files are encrypted using either a single key for both encryption and decryption or separate keys. Single key encryption is symmetric encryption and using two key distinct keys is asymmetric encryption.  Symmetric encryption uses the same cryptographic key for both the encryption and decryption a file. Managing keys at scale sometimes uses asymmetric key exchange protocols such as Diffie-Hellman can be used to share the symmetric cryptographic key with the others. Asymmetric encryption is typically accomplished using public and private key certificates based on the X.509 standard. Files are encrypted using the public key and decrypted using their private key. Asymmetric encryption is typically slower than symmetric encryption and not widely used for large file encryption, but is popular for key wrapping, key exchanges, and digital signatures.",
+      "Considerations": " \nContinuous monitoring to ensure private keys are not compromised and the certificate authority (CA) is trusted.\nSecure transfer of private keys between multiple devices.\n"
+    }
+  },
+  {
+    "Local File Permissions": {
+      "Definition": "Restricting access to a local file by configuring operating system functionality. \n"
+    }
+  },
+  {
+    "RF Shielding": {
+      "Definition": "Adding physical barriers to a platform to prevent undesired radio interference. \n"
+    }
+  },
+  {
+    "Software Update": {
+      "Definition": "Replacing old software on a computer system component. \n"
+    }
+  },
+  {
+    "System Configuration Permissions": {
+      "Definition": "Restricting system configuration modifications to a specific user or group of users. \n"
+    }
+  },
+  {
+    "TPM Boot Integrity": {
+      "Definition": "Assuring the integrity of a platform by demonstrating that the boot process starts from a trusted combination of hardware and software and continues until the operating system has fully booted and applications are running.  Sometimes called Static Root of Trust Measurement (STRM).",
+      "How it works": " During the boot process, the BIOS boot block (which with this defense enabled, is the Core Root of Trust for Measurement) measures boot components (firmware, ROM). The TPM hashes those measurements and stores the hashes in Platform Configuration Registers (PCRs).  Upon a subsequent boot, these hashes are provided to a verifier which compares the stored measurements to the new boot measurements. Integrity of the boot components is assured if they match.   Attestation of the secure boot occurs when a verifying entity requests a Quote which is a concatenation of the requested PCR values, hashed and signed by the TPM's unique RSA key.  The TPM signature is trusted because the private key is stored securely in hardware and never leaves the TPM.",
+      "Considerations": " \nThe TPM does not perform the follow-on actions of acting on the PCR value information, it just provides the PCR stored information.\nThe current version of TPM is 2.0.; most existing implementations use TPM 1.2.\n",
+      "Citations": " [1] TPM 2.0 Library\n[2] TCG Trusted Attestation Protocol (TAP) Use Cases for TPM Families 1.2 and 2.0 and DICE"
+    }
+  },
+  {
+    "File Analysis": {
+      "Definition": "File Analysis is an analytic process to determine a file's status. For example: virus, trojan, benign, malicious, trusted, unauthorized, sensitive, etc. \n",
+      "Technique Overview": " Some techniques use file signatures or file metadata to compare against historical collections of malware. Files may also be compared against a source of ground truth such as cryptographic signatures. Examining files for potential malware using pattern matching against file contents/file behavior. Binary code may be dissembled and analyzed for predictive malware behavior, such as API call signatures. Analysis might occur within a protected environment such as a sandbox or live system."
+    }
+  },
+  {
+    "Dynamic Analysis": {
+      "Definition": "Executing or opening a file in a synthetic \"sandbox\" environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.",
+      "How it works": " Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.",
+      "Considerations": " \nMalware often detects a fake environment, then changes its behavior accordingly. For example, it could detect that the system clock is being sped up in an effort to get it to execute commands that it would normally only execute at a later time, or that the hardware manufacturer of the machine is a virtualization provider.\nMalware can attempt to determine if it is being debugged, and change its behavior accordingly.\nFor maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.  \nSometimes the malware behavior is triggered only under certain conditions (on a specific system date, after a certain time, or after it is sent a specific command) and can't be detected through a short execution in a virtual environment.\n",
+      "Implementations": " \nCuckoo Sandbox\n"
+    }
+  },
+  {
+    "Emulated File Analysis": {
+      "Definition": "Emulating instructions in a file looking for specific patterns. \n"
+    }
+  },
+  {
+    "File Content Rules": {
+      "Definition": "Employing a pattern matching rule language to analyze files.",
+      "How it works": " Rules, often called signatures, are used for both generic and targeted malware detection. The rules are usually expressed in a domain specific language (DSL), then deployed to software that scans files for matches. The rules are developed and broadly distributed by commercial vendors, or they are developed and deployed by enterprise security teams to address highly targeted or custom malware. Conceptually, there are public and private rule sets. Both leverage the same technology, but they are intended to detect different types of cyber adversaries.",
+      "Considerations": " \nPatterns expressed in the DSLs range in their complexity. Some scanning engines support file parsing and normalization for high fidelity matching, others support only simple regular expression matching against raw file data. Engineers must make a trade-off in terms of: \nThe fidelity of the matching capabilities in order to balance high recall with avoiding false positives, \nThe computational load for scanning, and \nThe resilience of the engine to deal with adversarial content presented in different forms-- content which in some cases is designed to exploit or defeat the scanning engines.\n\n\nSignature libraries can become large over time and impact scanning performance.\nSome vendors who sell signatures have to delete old signatures over time.\nSimple signatures against raw content cannot match against encoded, encrypted, or sufficiently obfuscated content.\n",
+      "Implementations": " \nYARA\nClamAV\n"
+    }
+  },
+  {
+    "File Hashing": {
+      "Definition": "Employing file hash comparisons to detect known malware. \n",
+      "How it works": " This technique requires a list of hashes to compare a file against.",
+      "Considerations": " Performance on large files or very large numbers of files."
+    }
+  },
+  {
+    "Identifier Analysis": {
+      "Definition": "Analyzing identifier artifacts such as IP address, domain names, or URL(I)s. \n"
+    }
+  },
+  {
+    "Homoglyph Detection": {
+      "Definition": "Comparing strings using a variety of techniques to determine if a deceptive or malicious string is being presented to a user. \n",
+      "How it works": " A homoglyph, in this context, is a deceptive string or word which looks like a trusted word, but is composed of different characters, for example: goooogle.com versus google.com. This is commonly found in phishing and typo squatting attacks where a human exploiting through a social engineering campaign.",
+      "Considerations": " \nIn very large environments processing DNS queries can be computationally expensive due to the amount of traffic that is generated \nLegitimate companies and products use non-dictionary words in their names that could result in many false positives\n"
+    }
+  },
+  {
+    "URL Analysis": {
+      "Definition": "Determining if a URL is benign or malicious by analyzing the URL or its components. \n",
+      "How it works": " URLs may contain components, for example: \nscheme\nuserinfo\nhost name\nport\npath\nquery\nfragment\n These components are used as features in analysis algorithms. Contextual information about a URL such as where it is embedded (ex. emails, files, network protocols), header, path, location, and origin information, as well as information about the content returned from the URL request, may be incorporated into an analytic for URL analysis. For example, if a URL indicates a .pdf file but an executable is actually returned, the combination of these two pieces of information indicates suspicious activity. Additional techniques include: \nExtracting features of a URL such as domain name length, ratio of consecutive consonants, percentage of digits in a domain, and number of vowels. Values for each feature are combined to develop a score for the URL. \nDetermining the probability of a character occurring in the URL given the preceding two characters. For example, for google.com, the probability of a 'g' occurring at the beginning of a word, the probability of an 'o' occurring after a \"g, the probability of an o\" occurring after a 'g' and \"o, and so forth. A dictionary or a list of known good domains is used to determine probability. Probabilities are multiplied to develop a score for the URL.\n URL analysis may trigger follow-on analytics such as File Analysis",
+      "Considerations": " \nVolume of URLs being analyzed, combined with the speed at which they are analyzed\nFidelity of analysis technique at detecting brand new URLs versus analyzing URLs of established domains\n"
+    }
+  },
+  {
+    "Message Analysis": {
+      "Definition": "Analyzing email or instant message content to detect unauthorized activity.",
+      "Technique Overview": " Email and messaging are frequently used to deliver malicious content to targets. These enterprise capabilities are used to deliver software exploits or social engineering tricks. If the recipient of a message trusts the sender, attackers can avoid escalating suspicion. Emails and messages are also complex data structures. They contain files and links, and complex data encodings which vary region to region. Thus the defensive techniques used to analyze emails and messages are highly varied ranging from deep content analysis and execution to social network graph-style analytics to analyze trust or risk."
+    }
+  },
+  {
+    "Sender MTA Reputation Analysis": {
+      "Definition": "Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails. \n",
+      "How it works": " The sender message transfer agent (MTA) trust rating can be considered an indicator of the level of security risk and/or a trust level associated with sender MTAs in an email header. The features considered in determining the trust rating may include:  \nLength of time MTA has interacted with the enterprise\nNumber of sender domains sending emails from the MTA\nNumber of recipients in the enterprise the MTA sends emails to\nNumber of emails received from this MTA\nNumber of email replies received from this MTA\n For example, higher values for the length of time an MTA has interacted with the enterprise, or number of emails received from an MTA can result in a higher trust rating. The trust rating categorizes the sender MTA as unrated, neutral, trusted, suspicious, or malicious.",
+      "Considerations": " Legitimate emails from a sender MTA may receive a lower trust rating over time if the sender's domain gets spoofed and is used to send unauthorized emails."
+    }
+  },
+  {
+    "Sender Reputation Analysis": {
+      "Definition": "Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging). \n",
+      "How it works": " Sender trust rating can be considered an indicator of the level of security risk and/or a trust level associated with a sender. The features considered in determining the trust rating include: \nLength of time sender has sent emails to the enterprise\nNumber of recipients in the enterprise the sender interacts with\nSender vs. enterprise originated message ratio\nSender messages opened vs. not-opened ratio\nNumber of emails received from this sender \nNumber of emails replied to this sender\nNumber of emails from this sender not opened\nNumber of emails from this sender not opened that contain an attachment\nNumber of emails from this sender not opened that contain a URL\nNumber of emails sent to this sender\nNumber of email replies received from this sender.\n Higher values for the number of recipients the sender has interacted with or the number of emails received from the sender, for example, results in a higher trust rating. The trust rating can categorize the sender as unrated, neutral, trusted, suspicious, or malicious.",
+      "Considerations": " Legitimate emails from a sender may receive a lower trust rating over time if the sender's domain gets spoofed and is used to send unauthorized emails."
+    }
+  },
+  {
+    "Network Traffic Analysis": {
+      "Definition": "Analyzing intercepted or summarized computer network traffic to detect unauthorized activity. \n"
+    }
+  },
+  {
+    "Administrative Network Activity Analysis": {
+      "Definition": "Detection of unauthorized use of administrative network protocols by analyzing network activity against a baseline. \n",
+      "How it works": " Network protocols such as RDP, IPMI, SSH, SNMP, VNC, MOSH, NX, TeamViewer, SPICE, PCoIP, and others are used by system administrators to remotely manage servers. Defenders monitor administrative network activity to determine if the use of remote protocols is malicious. Attackers can abuse administrative protocols and leverage them for initial access to various endpoints. For example, an attacker with valid credentials will remotely SSH or RDP into a server and attempt to blend in with existing traffic from system administrators. By monitoring the traffic activity, it is possible to detect when the protocols are behaving differently from a known baseline of system administration activity.",
+      "Considerations": " \nAdministrative traffic can be encrypted, making network protocol analysis a challenge\nFalse alarms can be mitigated by integration with inventory management systems\n"
+    }
+  },
+  {
+    "Byte Sequence Emulation": {
+      "Definition": "Analyzing sequences of bytes and determining if they likely represent malicious shellcode..",
+      "How it works": " Bytes are analyzed as if they are machine code instructions, and such instructions that are a common component of known shellcode are noted, such as stack pivots, reads from a Memory Address Table, and system calls for functions that disable protections or execute code.  For example, the x86 instruction b0 0b: mov $11, %ax, with no further alterations to the %ax register, followed by cd 80: syscall executes the system call execve() in the Linux kernel, which replaces the current process with another one specified -- this is a common action in shellcode, so this sequence would be flagged.  This technique detects shellcode despite whether or not it would cause a buffer overflow in the target binary. If the sequence of bytes contains a sequence similar to that used in malicious shellcode, the entire byte sequence is flagged and a follow-on technique may be invoked.",
+      "Considerations": " If the shellcode instructions are far apart, simple implementations might not detect the shellcode. Due to the nature of assembly instructions not having a defined start or end, implementations which do not process all start sequences (for example, when they a find byte sequence of interest, continue scanning forwards from the end of it) might not detect the shellcode. This technique might not detect more complex or obfuscated instructions.  For that purpose, Dynamic Analysis or Emulated File Analysis could assist by analyzing the actual instruction function. This technique may not detect self-modifying code.  To make it harder for a process to modify itself, Process Segment Execution Prevention should be used, while noting its considerations. This technique might not detect malicious shellcode which reuses instructions in the target binary for malicious effect, as memory references in the presumed assembly code are not dereferenced.  Dynamic Analysis and Emulated File Analysis, when set up properly to fork from the running target binary, might detect this.  Process Segment Execution Prevention combined with Segment Address Offset Randomization frequently makes introduction of shellcode through overwriting a saved return pointer more difficult.  Call stack depth analysis might detect excessive reuse of instructions in the target binary.  Shadow Stack Frames might detect that a stack frame's return address has changed and Stack Frame Canary Verification might detect that the stack frame's return address was overwritten.  Other heuristic methods might detect jump-oriented programming shellcode. With inserting code directly, that it is not a buffer overflow, and just some place where code is executed either to a file or a write-what-where, the buffer overflow mitigations do not help.  Behavioral analysis could detect this, or proper access control could mitigate this. Byte sequences containing code that is never used as machine code are still analyzed and flagged for anomalies, and eventually, it is likely that an attack sequence will arise from the sheer volume of bytes transmitted."
+    }
+  },
+  {
+    "Certificate Analysis": {
+      "Definition": "Analyzing Public Key Infrastructure certificates to detect if they have been misconfigured or spoofed using both network traffic, certificate fields and third-party logs. \n",
+      "How it works": " Certificate Analysis ensures that the data elements of the certificate are current and anchored in a known trust model. Certificate authorities, revocation lists, and third-party secure logs are used in the analysis. Analysis includes detection of server impersonation, phishing domains, and forged certificates. TLS certificates are designed to expire to ensure that the cryptographic keys are forced to be changed on a regular basis. The certificates in the trust path also expire and can cause a break in the trust chain. This means that even if a server certificate is updated correctly, intermediate certificates can expire and the trust chain is not maintained. This can cause services to become unavailable."
+    }
+  },
+  {
+    "Active Certificate Analysis": {
+      "Definition": "Actively collecting PKI certificates by connecting to the server and downloading its server certificates for analysis. \n",
+      "How it works": " Analysis of server certificates using active methods to detect if certificates have been misconfigured or spoofed by using elements of the certificate, certificate authorities and signatures. This can be accomplished by verifying the digital signature on certificate. The client's browser can perform path verification to ensure that the server's certificate contains a valid trust anchor. Some browsers can be configured to implement the key-usage extensions contained certificates. This can help to prevent a certificate from being misused. Using either Certificate Revocation Lists (CRLs) or Online Certificate Status Protocol (OCSP) to determine the revocation status. OCSP Stapling, binding the status with the certificate, helps to mitigate potential delay in status verifications.",
+      "Considerations": " \nManagement of the PKI across the enterprise typically requires automation to maintain scalability and flexibility\nIf the certificate authority, issuing the certificate, is compromised then all of the certificates issued by the CA are suspect\nThere may be delays associated with updates to certificates\nRevoked certificates give the appearance of valid certificates until they are published to a trusted revocation service (OCSP or CRL)\nThe revocation service (OCSP or CRL) may be down during our connection and a browser will need to make a decision will need to be made about trusting the connection\n"
+    }
+  },
+  {
+    "Passive Certificate Analysis": {
+      "Definition": "Collecting host certificates from network traffic or other passive sources like a certificate transparency log and analyzing them for unauthorized activity. \n",
+      "How it works": " Certificates are analyzed outside of a TLS server connection using third-party secure update logs, domain name analysis and analytics. \nCertificate Logs\nThe key enabling feature is a secure service that maintains record logs of certificate activities. The logs allow users to only append certificates and never to delete or modify the log entries. The logs use Merkle Tree Hashes to ensure they have not been tampered with. The logging service also allows for public auditing by any user.\n The logging service, upon receipt of a certificate to log, will respond with a signed certificate timestamp (SCT). The SCT guarantees the certificate will be added to the log within the time specified. The SCT must be present with the certificate during a TLS handshake. \nCertificate Monitoring\nCertificate monitoring, of the logs, is typically done by the CA and they watch for suspicious certificate logging and unusual certificates or extensions or permissions. Monitors are also responsible for verifying the logs are accurate and public.\n\nCertificate Auditors\nLog integrity is verified by log auditors. Auditors make use of log proofs are used to validate the cryptographic hashes (Merkle Trees) that the log employs are consistent. In order to ensure consistency throughout multiple monitors and auditors, sharing a common logging service, gossip protocol is employed.\n\n \nA curated corpus of known benign domains and phishing domain names is used as training text for machine learning. Through the use of feature set extraction, vectors labels are created with scoring to indicated if they are considered benign or phishing domains. \n\nA stream of new or updated SSL certificates with fully qualified domain names (FQDN) is analyzed against the feature vectors and a predictive model determines a score for the domains. The scoring considers distance measures such as Levenshtein distance to help in determining the final label score. Supervised learning is also employed using the curated domains of benign and phishing domains.\n\nSubdomain phishing analysis, prepending a trusted domain to a phishing domain, and regular expression comparisons  are also used in the label scoring model. A tunable measure is used to determine the threshold for alerting. This measure helps to balance between precision and recall measures.\n\n",
+      "Considerations": " \nSome entity will need to run the logging service and a trusted entity is preferred.\nCertificate Authorities will likely need to monitor the logging service for consistency.\nCertificate revocation is unchanged and remains outside of Certificate Transparency, but certificates needing to be revoked are visible. \nTechnique dependent of reliable feed of new and updated certificates\nSome certificate authorities allow for certificates to be registered with wildcards in the FQDN and thus will fail some of the subdomain scoring\nPhishing HTTP domains will not be discovered\n"
+    }
+  },
+  {
+    "Client-server Payload Profiling": {
+      "Definition": "Comparing client-server request and response payloads to a baseline profile to identify outliers. \n",
+      "How it works": " Profiling request and response payloads across multiple clients to a single server to develop a baseline of their characteristics. May take into account request/response sizes, entropy, frequency, and rhythm. Finally, identify outliers as they may indicate a malicious payload delivery and subsequent server exploitation.",
+      "Considerations": " \nCollecting metrics to establish a profile can be challenging since user behavior can change easily. \nEmployees may work different hours or inconsistent schedules which will cause false positives.\nCollection of network activity to generate metrics is a computationally intensive process.\nUsers may log into different workstations which may cause false positives.\n"
+    }
+  },
+  {
+    "Connection Attempt Analysis": {
+      "Definition": "Analyzing failed connections in a network to detect unauthorized activity.",
+      "How it works": " Connection Attempt Analysis in multiple ways.  One approach looks for failed connection attempts against unallocated IP space. First, network traffic is captured to map out the network to identify network assets as well as unallocated IP space. The map is then used to determine if connection attempts are being made to the unallocated IP space.   Another approach passively inspects network traffic with application protocol analyzers observing network activity characteristics such as volume of packets sent/ received, TCP session attributes, and connection information between hosts (start time, source/destination host, services, etc.). Then using pattern matching to identify traffic which appears to be probing for network hosts.",
+      "Considerations": " \nImplementations that rely on analysis of unallocated IP address space increase in their complexity with network size and decentralized network infrastructure.\nInventory of unallocated IP space should should be continuously updated to mitigate the risk of false positives.\nIPv6 also introduces challenges including IPv6 traffic bypassing IPv4 specific protection systems (ex. firewalls and IDS) and complexity in managing both IPv6 and IPv4 addresses.\n"
+    }
+  },
+  {
+    "DNS Traffic Analysis": {
+      "Definition": "Analysis of domain name metadata, including name and DNS records, to determine whether the domain is likely to resolve to an undesirable host..",
+      "How it works": " This technique can be accomplished in a number of ways.  \nOne example analytic determines whether or not a domain name was generated with an algorithm. Domain generation algorithms (DGAs) are sometimes used to create a domain name automatically  that will resolve to C2 infrastructure, without directly coding the domains in question into the malicious code. \nAnother method analyzes information about domains that have been visited, including whether a domain name is longer than a common length,  if a dynamic DNS domain was visited, if a fast-flux domain was visited, and if a recently created domain was visited. These factors are used to develop a score and if that score is over a certain threshold, an alert is generated. \nCollected malware samples can be executed in a virtual environment to identify network domains that are connected to during execution. The network domains are then generated into signatures to identity bad domains for other hosts.\n This technique does not check for content hosted at the domain.",
+      "Considerations": " \nDNS produces a large amount of traffic which can be resource-intensive to analyze in real time.\nIf a server is compromised, for example, as part of a watering hole attack, but the DNS information pointing to that server is not altered, this technique would not catch such an incident.\n"
+    }
+  },
+  {
+    "File Carving": {
+      "Definition": "Identifying and extracting files from network application protocols through the use of network stream reassembly software. \n",
+      "How it works": " Protocol stream reassembly software recreates a directional byte stream by analyzing captured network packets. Once the stream is reassembled pattern matching is applied to determine if it contains a file of interest. Files of interest range from executable, archive, or document file formats. Once the file is captured, it is then processed with standard File Analysis Techniques. Example network protocols include HTTP, SMTP, FTP, HTTP/2, and TLS/HTTP/Dropbox.",
+      "Considerations": " \nThis is an error prone process due to the intricacies of network protocols and network packet capture.  For example reassembly may be done in real-time or streaming fashion, or packets may be written to disk, then bulk processed.  The packets may arrive out of order, with fragmentation, duplicates, or re-transmissions.  The reassembly software must compensate for the imperfect packet stream in order to recreate the well formed file which was transmitted.\nFile type identification can be a difficult process which can be exploited by adversaries.\n"
+    }
+  },
+  {
+    "Inbound Session Volume Analysis": {
+      "Definition": "Analyzing inbound network session or connection attempt volume. \n",
+      "How it works": " Network appliances are configured to alert on certain packets that typically are involved in DoS attacks. Typical packets include ICMP packets and SYN requests that are commonly used to flood networks. A sampling period is used to define a time window in which collected counts of the identified packets can be measured. If the collected number of packets exceeds a predefined limit then an alert is generated.",
+      "Considerations": " Scalability as volume of attacks increase; single servers may not have the memory and storage resources to handle high volumes of network traffic."
+    }
+  },
+  {
+    "IPC Traffic Analysis": {
+      "Definition": "Analyzing standard inter process communication (IPC) protocols to detect deviations from normal protocol activity.",
+      "How it works": " Inter process communication enables applications or threads to share data. This can involve one or more computers. Monitoring IPC in your environment can reveal abnormal or malicious activity.\nIPC can occur within a single computer or between multiple computers remotely through network protocols. Thus there are multiple ways to collect and monitor these exchanges between processes. A network protocol analyzer may monitor and parse SMB network traffic to record system activity. A host based monitoring agent may monitor IPC activity contained within a single host to look for deviations from standard usages. \nSMB\nZeromq\nJava RMI API\n",
+      "Considerations": " \nIPC can generate substantial amounts of data, and it may not be feasible to collect all of it. \nIPC may occur over loopback interfaces or direct memory access granted by the operating system.\n"
+    }
+  },
+  {
+    "Network Traffic Community Deviation": {
+      "Definition": "Establishing baseline communities of network hosts and identifying statistically divergent inter-community communication. \n",
+      "How it works": " Hosts/users within a computer network are analyzed to identify communities of hosts which frequently communicate. Future communications between communities that don't usually communicate can then be detected.  For example, if a community of hosts that communicate in support of a company's finance division suddenly starts to access the code server usually accessed only by engineers, this may indicate unauthorized activity.",
+      "Considerations": " \nPotential for false positives in very dynamic network environments.\nAttackers that move low and slow may not differentiate their behavior enough to trigger an alert.\n"
+    }
+  },
+  {
+    "Per Host Download-Upload Ratio Analysis": {
+      "Definition": "Detecting anomalies that indicate malicious activity by comparing the amount of data downloaded versus data uploaded by a host. \n",
+      "How it works": " Aggregate pull vs. push ratios from metadata are used to develop a baseline for a given host over a specific time period, e.g., over a three-hour period, one day, one week, etc. Anomalies identified over a threshold produce an alert. ",
+      "Considerations": " Collection and analysis of large network packet captures requires large storage and intensive computing power. The time windows used to calculate the ratio may vary in implementations, this consideration should take into account a threat model and likely effects (impacts) delivered by an adversary."
+    }
+  },
+  {
+    "Protocol Metadata Anomaly Detection": {
+      "Definition": "Collecting network communication protocol metadata and identifying statistical outliers. \n",
+      "How it works": " Network protocol metadata is first collected and processed in real-time or post-facto. Metadata may include packet header information or information about a session (ex. time between requests/responses). Metadata is then grouped based on shared characteristics and those groups are compared to each other. If particular metadata differs significantly from other data, an alert is generated, identifying the network event as anomalous. Anomalous activity may indicate unauthorized activity.",
+      "Considerations": " Metadata collection on enterprises can yield large data sets. Storage, indexing, querying, and aging should be considered prior to implementation."
+    }
+  },
+  {
+    "Relay Pattern Analysis": {
+      "Definition": "The detection of an internal host relaying traffic between the internal network and the external network.",
+      "How it works": " A relay may use a variety of proxying, forwarding, or routing technologies to bridge a protected network with an external network. A defensive analytic to detect a relay network may compare the network sessions among multiple hosts. Hosts which have nearly similar network statistics may be part of a relay network. The statistics may include number of bytes sent to and from, time of session initiation, packet size, or packet arrival time data.",
+      "Considerations": " Complex intranet VPNs or routing encapsulation may affect the detection analytics.  In addition, unwanted packets might not be forwarded, and additional packets may be added at the relay, further complicating detection."
+    }
+  },
+  {
+    "Remote Terminal Session Detection": {
+      "Definition": "Detection of an unauthorized remote live terminal console session by examining network traffic to a network host. \n",
+      "How it works": " An external attacker takes remote control of a host inside a company or organization's network and manually directs offensive techniques. Nonstandard terminal sessions and abnormal behaviors are analyzed in this technique. Abnormal behavior detection includes analysis of user input patterns in the real-time session, keyboard output and packet inspection. Network traffic from internal hosts is the main concern and focus for the traffic inspection. The network traffic is collected into inspection groups. The groups of traffic are assembled into distinct pair flows (outbound/inbound) and the pair flows are further divided into sessions. Only sessions originated inside of the network are considered for the inspection. Traffic inspection includes analysis to determine if a human is involved in the session exchanges. Time-based statistics are captured for each session being analyzed by the detection engine. Analysis algorithms look for patterns in the network traffic captured from the session data.  A detection engine groups the session traffic data, between the hosts, into rapid exchange instances. Analysis of rapid exchange traffic patterns can lead to the discovery of abnormal behavior which is indicative of a compromised internal host. The analysis algorithms look for patterns in the traffic which correlate to known activity (e.g., relay attacks, bot activity, bitcoin mining). Some metrics used during inspection include the following. \nNumber of rapid-exchange instances\nTime interval between packets\nFixed cadence of traffic\nRhythm and direction of the initiation of instances\nVolume of data flowing from internal to external controlling host\nData transfer characteristics\nVariability in length of silent periods\n",
+      "Considerations": " \nFull packet capture is required which can be process intensive to analyze\nAttackers that move low and slow may blend in with existing traffic resulting in false negatives\n"
+    }
+  },
+  {
+    "RPC Traffic Analysis": {
+      "Definition": "Monitoring the activity of remote procedure calls in communication traffic to establish standard protocol operations and potential attacker activities.",
+      "How it works": " A remote procedure call (RPC) enables one computer to execute a specific function on another computer, as if it were a local application process. There are numerous RPC specifications and implementations. RPC capabilities can be abused by attackers in order to achieve a variety of tactical objectives including execution, persistence, initial access, and more. RPC proxies may be used to collect and store RPC traffic. RPCs can occur over network sockets or named pipes. Analytics look for unauthorized behavior such as: \nProcesses being launched or scheduled remotely\nSystem configurations being changed remotely\nUnauthorized file read activity\n Example RPC Protocols: \nDCE/RPC\nCORBA\nOpen Network Computing Remote Procedure Call\nD-Bus\nXML-RPC\nJSON-RPC\nSOAP\nApache Thrift\n",
+      "Considerations": " \nRPC is widely used in enterprise environments, and significant data filtering may be required in large environments to enable analytic processing.\nRPC traffic may occur over a pipe, or within a host over loopback interface, thus making network collection difficult.\n"
+    }
+  },
+  {
+    "Platform Monitoring": {
+      "Definition": "Monitoring platform components such as operating systems software, hardware devices, or firmware. \n Platform monitoring consists of the analysis and monitoring of system level devices and low-level components, including hardware devices, to detect unauthorized modifications or suspicious activity. \n Monitored platform components includes system files and embedded devices such as: \n \nKernel software modules\nBoot process code and load logic\nOperating system components and device files\nSystem libraries and dynamically loaded files\nHardware device drivers\nEmbedded firmware devices\n \n"
+    }
+  },
+  {
+    "Firmware Behavior Analysis": {
+      "Definition": "Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.",
+      "How it works": " Firmware behavior analysis provides protections by ensuring that installed firmware has not been tampered with or modified. Firmware analysis applies to mutable firmware and immutable read-only memory (ROMs). Firmware in deployed network devices is typically not analyzed and monitored for vulnerabilities and thus is subject to potential attacks. This technique makes use of known and measured behavioral attributes, including timing attributes, of analyzed firmware on deployed devices.  A behavioral method that employs known timing measurements may use the timing results from a challenge and response protocol to detect the presence of malware in embedded firmware. Firmware device timing measurements are made, specific to the installed device, and are used in the verifying function. The original firmware image is modified by injecting a monitoring software component into the embedded firmware code. The injected software components will allow for a software root of trust, the challenge and response protocol, to be implement in the firmware.  A challenge-response is issued and includes a nonce so that replays are not allowed. The firmware will calculate a checksum over all of memory, including the nonce, and return the result. The verification system will compare the computed checksum and the time it took for the computation of the checksum to determine if the firmware has been modified. ",
+      "Considerations": " \nThe firmware code will need to be modified to include the behavioral monitoring functionality.\nThis technique is sensitive to the device the embedded firmware is hosted on and it is expected that the devices and firmware will need to be profiled and analyzed to determine timing estimation.\nThis technique is not expected to be one hundred percent correct as you would expect in a hardware root of trust solution and may require some tuning.\n"
+    }
+  },
+  {
+    "Firmware Embedded Monitoring Code": {
+      "Definition": "Monitoring code is injected into firmware for integrity monitoring of firmware and firmware data. \n",
+      "How it works": " Firmware in deployed network devices is typically not monitored for malicious changes. This technique provides a method to embed a software security component into the deployed firmware which provides a near real-time monitoring hook. The exception handling code, in the firmware, is typically used to expose any detected vulnerabilities. The injected software components provide a feature similar to intrusion detection systems for the firmware by detecting unauthorized modifications of the embedded firmware. The integrity of static code and firmware data are monitored continuously in the hosted devices. Comparisons are made to monitored elements like firmware memory addresses and data segments. Memory pages are scanned and if a modification is detected the software component may lock the page. This will protect subsequent attempted modifications to the firmware. The software component may utilize the exception handling code and thus be able to disclose the exact address of the modified memory. The injected software components are inserted during the firmware imaging process. The injected software is assumed to have knowledge of both the embedded code and the current execution state of the host program. The injected software will monitor and alert, in near real-time, on potential suspicious activity. The injected code is run alongside of the embedded code in the host. The injected software operates as an independent entity and is not dependent on the host software.  Finally, this technique may implement other countermeasure techniques as part of their analytical processes. These should be identified by referencing other countermeasure techniques directly as necessary.",
+      "Considerations": " \nThe firmware code will need to be modified and re-hosted on the device.\nExposing monitoring hooks to the injected code may introduce additional risk.\n"
+    }
+  },
+  {
+    "Firmware Verification": {
+      "Definition": "Cryptographically verifying firmware integrity. \n",
+      "How it works": " Cryptographic hash values are computed for system and peripheral firmware. The hash values are compared against precomputed hash values for the identified firmware. A hash value mismatch may indicate that the firmware may have been tampered with or updated with a non-current release indicating a misconfiguration for the system.",
+      "Considerations": " \nRequires cryptographically computed hash values of firmware \nRequires storage of precomputed firmware hash values\n"
+    }
+  },
+  {
+    "Peripheral Firmware Verification": {
+      "Definition": "Cryptographically verifying peripheral firmware integrity. \n How it works \n Peripherial firmware is collected and  analyzed on a host either periodically or on demand. This information may be collected for future comparisons. \n Changes in firmware hash values may indicate that the firmware has been tampered with or that firmware images are not maintained to current baselined versions, or even known vulnerable versions are deployed.  \n",
+      "Considerations": " \nTrust baselines will need to be generated for specific devices\nChanges to trusted configurations will need to be managed across the enterprise\n"
+    }
+  },
+  {
+    "System Firmware Verification": {
+      "Definition": "Cryptographically verifying installed system firmware integrity. \n",
+      "How it works": " Cryptographic hash values are computed for system firmware. The hash values are compared against precomputed firmware hash values to determine if the firmware has been tampered with. When system firmware verification fails a set of predefined responses is typically invoked. The responses may direct the system to disable some devices or operations.",
+      "Considerations": " \nRequires the use of system provided security modules\nSecure hash values will need to be computed for firmware\n"
+    }
+  },
+  {
+    "Operating System Monitoring": {
+      "Definition": "The operating system software, for D3FEND's purposes, includes the kernel and its process management functions, hardware drivers, initialization or boot logic. It also includes and other key system daemons and their configuration. The monitoring or analysis of these components for unauthorized activity constitute Operating System Monitoring. \n",
+      "Technique Overview": " \"An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs.\" [1] Operating System Monitoring Techniques have varied implementations including built-in kernel modules, third-party privileged system daemons, or even standard systems administration tools included with an operating system. \nhttp://dbpedia.org/resource/Operating_system\n"
+    }
+  },
+  {
+    "Endpoint Health Beacon": {
+      "Definition": "Monitoring the security status of an endpoint by sending periodic messages with health status, where absence of a response may indicate that the endpoint has been compromised.",
+      "How it works": " Endpoints are configured to periodically generate and transmit a secure heartbeat that is delivered on a configured schedule and provides endpoint status information. Status information can include software details (version, configuration, etc), endpoint identification (MAC, IP address, machine ID) or other hardware/software configuration information. Interruption of the heartbeat can signal that the endpoint has been compromised. ",
+      "Considerations": " \nSecurity of heartbeat messages to ensure message integrity\nDisappearance of the heartbeat could simply mean that the endpoint is powered off or intentionally disconnected from the network. Therefore other criteria may need to be used to accurately detect endpoint compromise.\nAttacker presence on the machine may leave the heartbeat intact.\nAn attacker may determine the format of the heartbeat and continue to send it even after the machine is compromised.\n"
+    }
+  },
+  {
+    "Input Device Analysis": {
+      "Definition": "Operating system level mechanisms to prevent abusive input device exploitation. \n",
+      "How it works": " Input Device Hardening techniques filter certain commands, or disable related operating system functionality. All of these values can be analyzed and compared to a baseline: \nAmount of input\nDuration of a single input\nDurations between inputs\nValue of input\n Context can also include: \nUser which is logged in, to include attributes such as physical location of the user\nDate and time\nSystem which is processing the input\nSource device of input, to include its properties (eg. manufacturer), configuration (eg. keyboard layout) and behavioral attributes of this device (eg. first use)\nSource system of input (local or remote system)\nOther hardware devices attached to the system\n Actions can include: \nDisabling the source device \nSending an alert\nLocking the current session (eg. system screen lock, or returning to an authentication screen in a web app) and requiring one or more methods of authentication to continue\nAdministratively disabling credentials for the account or the entire account -- the technique Account Locking\n A malicious input device sends many keystrokes with approximately the same delay between each.  This does not match the normal cadence of input, and the device is disabled. Input to type the session user's name takes abnormally longer for each keystroke.  The system is locked to the password prompt screen. A system receives key press events from two different devices -- one device sends keystrokes after the other has been idle for a long time. A system receives physical input in a user session, while that user has sent input from a device located out of the country in the past hour. Network traffic is suddenly routed through a new external device, and nearly the same volume of network traffic is subsequently sent out the previously existing interface.  The new external device is disabled, and an alert is raised to investigate the network configuration for a potential compromise. ",
+      "Considerations": " Given some example of legitimate behavioral input patterns, attackers could mimic those input patterns, a technique which has been used in popular culture in the creation of Deepfake videos and This Person Does Not Exist."
+    }
+  },
+  {
+    "Memory Boundary Tracking": {
+      "Definition": "Analyzing a call stack for return addresses which point to unexpected  memory locations. \n",
+      "How it works": " This technique monitors for indicators of whether a return address is outside memory previously allocated for an object (i.e. function, module, process, or thread). If so, code that the return address points to is treated as malicious code.",
+      "Considerations": " Kernel malware can manipulate memory contents, for example modifying pointers to hide processes, and thereby impact the accuracy of memory allocation information used to perform the analysis."
+    }
+  },
+  {
+    "Scheduled Job Analysis": {
+      "Definition": "Analysis of source files, processes, destination files, or destination servers associated with a scheduled job to detect unauthorized use of job scheduling.",
+      "How it works": " Scheduled job execution can be utilized by adversaries for the purpose of persistence, conducting remote execution, or gaining privileges. Details of a scheduled job such as associated source files, processes, destination files, or destination servers are first identified and analyzed and then compared against an anti-malware signature database, whitelist, or reputation server. For example, a file associated with a scheduled job to be executed at a specified time or a remote server that is accessed as part of a scheduled task is compared against an anti-malware signature database, whitelist, or reputation server, and if a match is found, execution is denied and an alert is generated. In addition to traditional scheduled jobs, triggers can be set to execute a specific command after detecting a specific event in the system, such as with WMI Event Subscriptions in Windows.",
+      "Considerations": " Jobs can be scheduled in many different and sometimes creative ways through operating system capabilities."
+    }
+  },
+  {
+    "System Daemon Monitoring": {
+      "Definition": "Tracking changes to the state or configuration of critical system level processes. \n",
+      "How it works": " Attackers may manipulate system settings or services to disable system logging or monitoring of security tools and events. Firewall and antivirus services are popular targets for attackers. Disabling system logs will also allow an attacker's actions to go unnoticed. Analysis of logs, registries, and process monitoring help defenders locate signs of tampering. Two possible approaches are to monitor hardened system services or to monitor registry updates for modifications to security settings."
+    }
+  },
+  {
+    "System File Analysis": {
+      "Definition": "Monitoring system files such as authentication databases, configuration files, system logs, and system executables for modification or tampering. \n",
+      "How it works": " This technique ensures the integrity of system owned file resources. System files can impact the behavior below the user level.",
+      "Considerations": " \nNeed to manage the size of log file analysis.\nFalse positives are a concern with this technique and filtering will need to be given additional thought.\nA baseline or snapshot of file checksums should be established for future comparison.\n"
+    }
+  },
+  {
+    "Service Binary Verification": {
+      "Definition": "Analyzing changes in service binary files by comparing to a source of truth. \n",
+      "How it works": " System service applications may originate from the operating system installation or third-party applications installed with administrative privileges. These services have an entry point of some executable file-- a binary or a script. Attackers sometimes modify these executables to launch their own code. Analyzing changes in these files may uncover unauthorized activity.",
+      "Considerations": " \nThese files change for legitimate reasons when the system or software updates.\nThe source of truth must not be corrupted in order for this method to work.\n"
+    }
+  },
+  {
+    "System Init Config Analysis": {
+      "Definition": "Analysis of any system process startup configuration."
+    }
+  },
+  {
+    "User Session Init Config Analysis": {
+      "Definition": "Analyzing modifications to user session config files such as .bashrc or .bash_profile."
+    }
+  },
+  {
+    "Process Analysis": {
+      "Definition": "Process Analysis consists of observing a running application process and analyzing it to watch for certain behaviors or conditions which may indicate adversary activity. Analysis can occur inside of the process or through a third-party monitoring application. Examples include monitoring system and privileged calls, monitoring process initiation chains, and memory boundary allocations. \n"
+    }
+  },
+  {
+    "Database Query String Analysis": {
+      "Definition": "Analyzing database queries to detect SQL Injection. \n",
+      "How it works": " Some implementations use software hooks to intercept function calls related to database query operations. Other implementations might intercept or collect network traffic. The database query string is then extracted and analyzed with various methods, for example: \nDetecting specific administrative SQL commands\nAnomalous sequences of commands when compared to a statistical baseline.\nAnomalous commands for a given user role.\n",
+      "Considerations": " Some capabilities sanitize queries before permitting them to be transmitted to the database. This incurs risks such altering data in an undesired way or breaking application functionality."
+    }
+  },
+  {
+    "File Access Pattern Analysis": {
+      "Definition": "Analyzing the files accessed by a process to identify unauthorized activity. \n",
+      "How it works": " File modifying malware such as wipers and ransomware are detected by identifying file access patterns that are associated with a malicious process. Examples of file access patterns include accessing a large number of files, accessing multiple file types, files being accessed located in multiple locations in a directory, and copying a file and encrypting the contents of that file into a copy.",
+      "Considerations": " Certain file access actions may not be statistically different from authorized activity."
+    }
+  },
+  {
+    "Indirect Branch Call Analysis": {
+      "Definition": "Analyzing vendor specific branch call recording in order to detect ROP style attacks. \n",
+      "How it works": " This technique is used to detect an attacker attempting to exploit and execute code on a target system's call stack using return-oriented programming (ROP). Modern processors that have the ability to maintain a list of the branching calls, e.g., Intel's Last Branch Recording (LBR), can be used to track and analyze indirect branching calls that are indicative of malicious activity. In order to reduce the number of indirect branch calls to analyze to a manageable set it is assumed that malicious ROP activity will involve the use of system calls.  The technique observes indirect branch calls that are part of paths that lead to system calls, all others are ignored. Branching calls chained together is often referred to as gadgets and gadgets are often used in ROP attacks. Indirect branch calls that involve a transfer from user-space to kernel-space are of interest for this technique. Identification of potential ROP exploit execution includes: \nInspecting the LBR when a system function call is made\n\nThe LBR is configured to return only instruction of interest (ret, indirect jmp, indirect calls)\n\n\n \nBehavior is analyzed for \nRet instructions that appear to target areas not preceded by the call sites\nSequences of small code fragments that appear to be chained through the indirect branching calls (gadgets)\n\n\n \nOf interest are returns that appear to not render control back after calls\nTypical ret-call are paired\ngadgets will appear to have ret followed by instruction of next instruction of the following gadget\n\n\n",
+      "Considerations": " \nMay be operating system dependent since specific system calls are used to scope branching behavoir\nProcessors need to support access to a Last Branch Recording list feature\nThe size of the LBR stack can limit the expected size of the analyzed execution stack\nIf processor does not support LBR then overhead costs for the analysis can be significant\n"
+    }
+  },
+  {
+    "Process Code Segment Verification": {
+      "Definition": "Comparing the \"text\" or \"code\" memory segments to a source of truth. \n",
+      "How it works": " A process code segment is an executable portion of computer memory allocated to a particular process. Process Code Segment Verification implements verification to compare a process code segment to some expected value.  Verification can occur during application startup, or continuously during execution. The logic which verifies the process code may be separate in a third-party process, embedded in the application itself at compile time, or dynamically linked at runtime. Examples of systems of record: \nOn-disk application binary files or checksums\nRemotely stored binary data or checksums\nEmbedded binary data or checksums\n If the verification function determines a process code segment may have been altered, a capability may invoke Eviction techniques  as Process Termination to end the current process, or Executable Blacklisting to prevent the executable from launching in the future.",
+      "Considerations": " False positives commonly occur in the case that the layout of code in the process segment is legitimately modified: \n Operating system features or third-party security software may modify the layout of process code, for example in the defensive technique Segment Address Offset Randomization, or in the case that a module is rebased.  In both of these cases, the alteration occurs before the code is fully loaded into memory, and it would be possible to avoid the false positive by securely feeding this constant offset and any relocation data into the verification logic.\n\nProcess code segments may be written to modify themselves or other process code segments; however, this goes against widely-accepted current practices in software development.\n\n False negatives can occur via alteration of the verification logic or source of truth, or insufficient verification logic. \nVerification techniques which are executed only locally may be defeated by altering the local verification logic.\n\nVerification that is run only on a recurring basis could be evaded if the malicious alteration is completed before verification is run.\n\nVerification that requests an operation to be performed on a subset of the code segment could be evaded by performing that operation on a copy of the relevant bytes of the code segment.\n\nVerification based on a system of record that can be altered may fail if that system of record is modifiable by a malicious user.\n\n"
+    }
+  },
+  {
+    "Process Self-Modification Detection": {
+      "Definition": "Detects processes that modify, change, or replace their own code at runtime. \n",
+      "How it Works": " A security agent installed on the host machine intercepts API calls between a process and operating system. Intercepted API calls are then compared against attack signatures/patterns to identify API calls that modify executable memory or modify the entry point address of a suspended child process. Attack patterns include: \nExecutable code of a suspended child process removed from memory by one or more API calls.\nNew executable code injected and / or loaded into memory of a suspended child process by one or more API calls.\nExecutable code modified by one or more API calls.\nNext instruction pointer value in memory modified by one or more API calls.\n",
+      "Considerations": " Comparing loaded code segments of processes with what is expected to have been loaded from a file can result in false positives, due to legitimate uses of self-modification for decrypting or uncompressing code segments."
+    }
+  },
+  {
+    "Process Spawn Analysis": {
+      "Definition": "Analyzing spawn arguments or attributes of a process to detect processes that are unauthorized. \n",
+      "How it works": " Process attributes are established when an operating system spawns a new process. These attributes are analyzed to look for the presence or absence of specific values or patterns.  Some attributes of interest are: \nuser\nprocess name\nimage path\nsecurity content\n",
+      "Considerations": " \nAttackers can spoof the parent process identifier (PPID), which could bypass this defense to allow execution of a malicious process from an arbitrary parent process.\nAttackers could have legitimately compromised any of the process properties, such as the user, to make the execution appear legitimate.\nLocation: If the full image path is not checked, there could be a conflict with an executable that appears earlier due to resolution involving the system environment path/classpath variable.\nParsing issues: If the raw command from a shell is analyzed, rather than the actual function call, it is important to identify the actual command  being run from its arguments.  In Windows, services with unquoted file paths containing spaces will try to use the first token as the executable and the rest as arguments -- and shift tokens to the executable until a valid one is found.\nSome operating systems can spawn processes without forking.\n"
+    }
+  },
+  {
+    "Process Lineage Analysis": {
+      "Definition": "Identification of suspicious processes executing on an end-point device by examining the ancestry and siblings of a process, and the associated metadata of each node on the tree, such as process execution, duration, and order relative to siblings and ancestors.",
+      "How it works": " Process tree analysis techniques gather information on how a process was initiated to determine if a process is malicious. For example, if a process was not initiated from boot or not initiated by another process, that process is identified as suspicious. Also, if a new process was started before a process initiated by the device (ex. during boot) and that new process was not initiated by a user (which can be determined by examining process parameters such as type of process, its creator, source, etc.) the process is identified as suspicious.  For example, Microsoft Word may block execution of any subprocess that is not in an approved path.",
+      "Considerations": " \nAttackers may spoof the parent PID (https://attack.mitre.org/techniques/T1502/), rendering such after-the-fact analysis on process lineage ineffective.\nProcesses may hide from various means of detection; an example on Linux is where a rootkit might remove key files for the process from its directory in /proc.\nZombie processes.\n"
+    }
+  },
+  {
+    "Script Execution Analysis": {
+      "Definition": "Analyzing the execution of a script to detect unauthorized user activity. \n",
+      "How it works": " Software installed on the host system hooks into a scripting engine to intercept commands before they are executed and block commands if they are determined to be harmful. Pattern matching is used to identify unauthorized commands or in the case of script files, a hash of the file is compared against hashes of known unauthorized script files.",
+      "Considerations": " List of known unauthorized script files or regular expression patterns must be kept up to date to ensure detection of new threats."
+    }
+  },
+  {
+    "Shadow Stack Comparisons": {
+      "Definition": "Comparing a call stack in system memory with a shadow call stack maintained by the processor to determine unauthorized shellcode activity. \n",
+      "How it works": " This technique compares the call stack stored in system memory with the shadow call stack maintained in the cache memory of the processor.  Mismatches between the two are compared since a return oriented programming attack may only be able to control or spoof the call stack and not the shadow call stack. Mismatches are counted and if the number of mismatches exceeds a certain threshold it is an indication of unauthorized activity and a security response action is performed.",
+      "Considerations": " If the threshold for detecting a stack anomaly is low, it may not detect a return-oriented attack with just one gadget, such as a return-to-libc or return-to-plt attack.  Additionally, this technique may not detect JOP (Jump-oriented programming), as the return instruction is not executed."
+    }
+  },
+  {
+    "System Call Analysis": {
+      "Definition": "Analyzing system calls to determine whether a process is exhibiting unauthorized behavior. \n",
+      "How it works": " System calls are APIs between a user application and the operating system [1]. By analyzing a process's use of these APIs, it is, in some cases, possible to ascertain whether a program is exhibiting unauthorized behavior, including trying to escalate its privileges. A common method to capture system calls is to use kernel APIs to hook [2] a process's system call invocations. The Linux system call ptrace tracks other system calls in a process and allows their alteration; this is made use of by GDB.  strace utilizes ptrace and will print to stdout each system call invoked. Other applications record this data in local or remote databases. The log entry for each system call, which may reference additional information such as the date and time, and the process tree for the process which made the system call, is relayed, in real time or post-facto, to an analysis module which consults a catalog or model to determine whether the distribution matches a known-good or known-bad pattern. System calls are analyzed with a variety of methods. Some analytics look for specific sequences of instructions, others may apply statistical methods to identify abnormal behavior. Sequences of instructions can be abstracted into conceptually higher order user activities, for example: \nAn attacker executes many system calls in a short period of time, with several sequences which could be used to escalate privileges.\nGetting the contents from a URL, writing to a new file, and then executing the same file.\nA ransomware program which either uses a loop or creates many threads to: read a specified file, encrypt its contents, create an output file with a similar name to the original file, and delete the unencrypted original.\n",
+      "Considerations": " \nDuplicative or extraneous system calls may be added to malware to defeat analytics.\nMalware could replace API hooking instructions to allow system calls to be made without being monitored.\nA model built from a training set of system calls and related data may not be updated fast enough to detect new threats.\n [1] Syscalls [2] Hooking"
+    }
+  },
+  {
+    "File Creation Analysis": {
+      "Definition": "Analyzing the properties of file create system call invocations. \n"
+    }
+  },
+  {
+    "User Behavior Analysis": {
+      "Definition": "Analysis of user behavior and patterns for the purpose of detecting unauthorized user activity.",
+      "Technique Overview": " Some techniques monitor patterns of human behavior and then apply algorithms and to identify patterns such as repeated login attempts from a single IP address or large file downloads, or abnormal accesses. Other techniques may have explicit or rigid definitions of \"bad behavior\" which are then matched against instances in a computer network environment."
+    }
+  },
+  {
+    "Authentication Event Thresholding": {
+      "Definition": "Collecting authentication events, creating a baseline user profile, and determining whether authentication events are consistent with the baseline profile. \n",
+      "How it works": " Authentication event data is collected (logon information such as device id, time of day, day of week, geo-location, etc.) to create an activity baseline. Then, a threshold is determined either through a manually specified configuration, or a statistical analysis of deviations in historical data. New authentication events are evaluated to determine if a threshold is exceeded. Thresholds can be static or dynamic. As a result of the analysis, actions taken could include: \nAccount Locking\nRaising an alert\n \nDirectory server logs\nVPN Server logs\nIDAM Capability logs\nNAC logs\nAuthentication client logs\nKerberos network traffic\nLDAP network traffic\n",
+      "Considerations": " This technique covers statistical outliers. Though depending on the complexity or dimensionality of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If the malicious activity is not statistically different from benign activity, an alert threshold will not be met."
+    }
+  },
+  {
+    "Authorization Event Thresholding": {
+      "Definition": "Collecting authorization events, creating a baseline user profile, and determining whether authorization events are consistent with the baseline profile. \n",
+      "How it works": " Authorization event data is collected to create a baseline user profile. Authorization events that deviate from the baseline and exceed a static or dynamic threshold are identified for further action. Authorization events can include successful and failed authorization attempts as well as events related to permissions including viewing, editing, deleting, creating files, databases etc.",
+      "Considerations": " Depending on the complexity of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If malicious activity is not statistically different from benign activity, an alert threshold will not be met."
+    }
+  },
+  {
+    "Credential Compromise Scope Analysis": {
+      "Definition": "Determining which credentials may have been compromised by analyzing the user logon history of a particular system. \n",
+      "How it works": " Credentials may be stored in memory for a variety of reasons; on Windows, they may be stored in lsass.exe.  Once a credential dumper like mimikatz runs and dumps the memory of lsass.exe, the credentials of every account logged on since boot are potentially compromised.\nWhen such an event occurs, this analytic will give the forensic context to identify compromised users. Those users could potentially be used in later events for additional logons. Operating System may cache a certain number of credentials onto the hard disk to use as a source of truth if it cannot contact the credential server.  In many versions of Microsoft Windows, the 10 most recent are cached by default; this setting can be changed in the Microsoft Management Console's Local Security Policy: Computer Configuration -> Windows Settings -> Local Policy -> Security Options -> Interactive Logon: Number of previous logons to cache -> 0  Here we are not concerned with the alteration of the credentials but the fact that they might be read.  If the attacker has physical access to the machine they are unlikely to be stopped from reading files on the filesystem.\n\"In the event that the domain controller is unavailable Windows will check the last password hashes that has been cached in order to authenticate the user with the system. These password hashes are cached in the following registry setting:\nHKEY_LOCAL_MACHINE\\SECURITY\\Cache\nMimikatz can retrieve these hashes if the following command is executed:\nlsadump::cache\" [1] The Registry Hive, HKEY_LOCAL_MACHINE\\SAM, which is stored in the supporting files %systemroot%\\System32\\Config{Sam,sam.log,sam.sav}, contains the SAM file. DC: This is stored in %systemroot%\\ntds\\ntds.dit. (https://www.ultimatewindowssecurity.com/blog/default.aspx?d=10/2017) Sometimes memory, which contains credentials, could get on the hard disk. Like with hiberfil.sys in Windows.  Equivalent on Linux In Linux, an attacker could read the /etc/shadow file. Reading from /proc directory: mimipenguin, many others.",
+      "Considerations": " Effective implementation requires identifying any location that could end up containing credentials, and detecting an method of potential access to a source of credential data. \nhttps://medium.com/blue-team/preventing-mimikatz-attacks-ed283e7ebdd5\n"
+    }
+  },
+  {
+    "Domain Account Monitoring": {
+      "Definition": "Monitoring the existence of or changes to Domain User Accounts. \n"
+    }
+  },
+  {
+    "Job Function Access Pattern Analysis": {
+      "Definition": "Detecting anomalies in user access patterns by comparing user access activity to behavioral profiles that categorize users by role such as job title, function, department. \n",
+      "How it works": " Peer group analysis identifies functionally similar groups of actors (users or resources) based on categorizations such as job title, organizational hierarchy, or other attribute that indicates similarity of job function. Current user access activity is then compared to the appropriate peer group behavior profile to identify anomalies.",
+      "Considerations": " Potential for false positives from anomalies that are not associated with malicious activity."
+    }
+  },
+  {
+    "Local Account Monitoring": {
+      "Definition": "Analyzing local user accounts to detect unauthorized activity. \n"
+    }
+  },
+  {
+    "Resource Access Pattern Analysis": {
+      "Definition": "Analyzing the resources accessed by a user to identify unauthorized activity. \n",
+      "How it works": " This technique analyzes a user's resource accesses by comparing the user's recent activity against a baseline activity model. Major differences between the current activity and the baseline model might indicate unauthorized activity if they are severe enough.",
+      "Considerations": " \nPotential for false positives from anomalies that are not associated with malicious activity.\nAttackers that move low and slow may not differentiate their resource access activity behavior enough to trigger an alert.\n"
+    }
+  },
+  {
+    "Session Duration Analysis": {
+      "Definition": "Analyzing the duration of user sessions in order to detect unauthorized  activity. \n",
+      "How it works": " Detecting unauthorized user sessions by comparing the duration of a user logon session with a baseline behavior model. The behavior model comprises historical user session duration times.  Abnormalities between session duration and the behavior model may indicate suspicious activity.",
+      "Considerations": " \nPotential for false positives from anomalies that are not associated with malicious activity.\nAttackers may not differentiate their session duration enough to trigger an alert.\n"
+    }
+  },
+  {
+    "User Data Transfer Analysis": {
+      "Definition": "Analyzing the amount of data transferred by a user. \n",
+      "How it works": " Unusual data transfer activity may indicate unauthorized activity. Data transfers can be analyzed by collecting network traffic or application logs.",
+      "Considerations": " \nThere is a potential for false positives from anomalies that are not associated with unauthorized activity.\nAttackers that move low and slow may not differentiate their data transfer behavior enough for an alert to trigger.\n"
+    }
+  },
+  {
+    "User Geolocation Logon Pattern Analysis": {
+      "Definition": "Monitoring geolocation data of user logon attempts and comparing it to a baseline user behavior profile to identify anomalies in logon location. \n",
+      "How it works": " Geolocation data for each user logon attempt is collected and used to create a baseline user behavior profile. Current geolocation logon data is then compared against the user behavior profile. Logon activity that deviates from normal patterns and can help in identifying situations that may be indicative of a remote attacker using stolen credentials. For example:  \nlogons from locations that are different from where a user usually logs in\nlogons from a location in which an enterprise has no users located\nlogon that is not physically possible given the elapsed time since a logon from another location.\n",
+      "Considerations": " \nPotential for false positives from logon anomalies that are not associated with malicious activity.\nAttackers may not differentiate their logon behavior enough to trigger an alert.\n"
+    }
+  },
+  {
+    "Web Session Activity Analysis": {
+      "Definition": "Monitoring changes in user web session behavior by comparing current web session activity to a baseline behavior profile or a catalog of predetermined malicious behavior. \n",
+      "How it works": " User web session data is collected over a period of time to create a user behavior profile. Data collected includes clicks made on a website, average time between clicks, filling out web forms, order in which pages are viewed, and downloading files. Current user web session behavior is then compared against the use behavior profile to identify anomalies and a likelihood that the current user web session is malicious. Current user web session behavior can also be compared to predetermined known malicious behavior profiles that are developed through analysis of malware in run time at a threat research facility. ",
+      "Considerations": " \nPotential for false positives from anomalies that are not associated with malicious activity.\nAttackers may not differentiate their web session activity enough to trigger an alert.\n"
+    }
+  },
+  {
+    "Execution Isolation": {
+      "Definition": "Execution Isolation techniques prevent application processes from accessing non-essential system resources, such as memory, devices, or files. \n"
+    }
+  },
+  {
+    "Executable Allowlisting": {
+      "Definition": "Using a digital signature to authenticate a file before opening.",
+      "How it works": " This technique is generic and there are numerous ways to compute and authenticate digital signatures. \nA digital certificate is generated from a private/public key pair issued by a certificate authority (CA). A hash of the file is encrypted using the private key. When the file is downloaded by another user, the user's system uses the public key to decrypt the hash and a new hash is created of the downloaded file. The hash decrypted by the public key is compared to the new hash and if there is a mismatch, further techniques, such as file deletion, file quarantine, or Executable Blacklisting may be invoked. This technique may be invoked when deciding whether to execute a file.",
+      "Considerations": " Organizations which download or create high volumes of software make management complex, in particular engineering or scientific organizations."
+    }
+  },
+  {
+    "Executable Denylisting": {
+      "Definition": "Blocking the execution of files on a host in accordance with defined application policy rules.",
+      "How it works": " A policy-enforcing application can register an application for denylisting based on conditions including the following: \nFile attributes\nfile name\nfile path\nfile hash\nfile publisher, as obtained from the digital signature\npermissions of the file\n\n\nFile malware scan (eg. Windows SmartScreen)\nUser-File combination\n This may be done to prevent execution of applications which are: \nan old version with known vulnerabilities\nwithout a valid license, which could cause legal issues\nin a directory that is accessible to low-privileged users, that could be accessed by a malware dropper\nknown trojan horse programs\ntoo open in their permissions, possibly set to run as a user other than the originator or allowing execution when they should not be\na match to the hash of other known malware\nare detected as undesirable based on a file scan runtime behavior\n System administrators will customize the rules for the given environment. The policy-enforcing program may work by running in kernel mode, and [intercepting] [system calls which execute a process]. ",
+      "Considerations": " \nIf denylisting is done by filename, filepath, or hash, these mechanisms may be a worthy first line of defense and detection, but could still be evaded by an attacker.\nContinuous management is needed to keep the denylist up to date, whether it is based on hash, publisher, behavior, or any other digital artifact.\nAlthough denylists based on attributes such as file path and virus scan could defend against some threats which they have not been explicitly coded to block, denylists may not provide protection from new, unknown, or zero day attacks. \n",
+      "Examples": " On a Windows machine the Windows Defender Application Control (WDAC) policy enforcement is run in the kernel and allows for restricting applications."
+    }
+  },
+  {
+    "Hardware-based Process Isolation": {
+      "Definition": "Preventing one process from writing to the memory space of another process through hardware based address manager implementations.",
+      "How it works": " Process isolation, in this context, is address space separation controlled by a security function that limits the communication between processes so that one process cannot directly modify the executing code of another process. For example with virtual address space: \nProcess A address space is different from process B address space, which prevents process A from writing to process B\n Hardware process isolation is commonly implemented through Direct Memory Access (DMA) which collaborates with a Memory Management Unit (MMU), or Input-Output Memory Management Unit (IOMMU). These hardware controls are deployed directly on processors to aid hosts or enclaves in process isolation. \nDMA - Direct memory access allows memory access to occur independently of the program currently run by the microprocessor. DMA allows for I/O devices to directly read from and write to memory, or it can be used to efficiently copy blocks of memory. During DMA transfers, the microprocessor can execute an unrelated program.\nMMU - A memory management unit acts as an access control and is responsible for performing the translation of virtual memory addresses to physical memory addresses. The MMU allocates each process its own virtual memory space.\nIOMMU - An input-output memory management unit is used to allocate each I/O device its own virtual address space to the underlying physical addresses. IOMMU allows devices that do not support long memory addresses to address the entire memory space. \n",
+      "Considerations": " \nPrivate hosts may be vulnerable to DMA attack if they have a PCI or PCI Express port that connects attached devices directly to physical address space.\n",
+      "Implementations:": " \nIntel Virtualization Technology for Directed I/O (Intel VT-d)\nFirecracker\n"
+    }
+  },
+  {
+    "IO Port Restriction": {
+      "Definition": "Limiting access to computer input/output (IO) ports to restrict unauthorized devices. \n",
+      "How It works": " Software-based restriction uses agent software installed on a computer system. The agent software monitors all IO port system traffic. The agent software is configurable to limit the use of certain devices connected to IO ports. The restriction software can also be configured to limit the access to files and applications on external storage devices connected to IO ports. Hardware-based restriction can also be employed to limit access to IO ports. For example, a hardware USB filter device that is placed between the host system and the external devices can filter IO port connections based on configurable rules. When new devices are connected to the USB filter the type of device is determined. Using an allow list a connection determination is made for the device. Some implementations detect when a device is connected in order to authorize the connection against a list of approved devices, in some cases by device type. For example, if the device is determined to be a storage device, then the contained files and executables are examined to more accurately identify the device type. Types of restrictions that may be applied: \nDevice connection\nDevice command filtering\nDevice file system read or write restrictions\n",
+      "Considerations": " \nAgent software will need to be installed on host systems\nConfigurations for allow/deny for devices and files will need to be maintained\n"
+    }
+  },
+  {
+    "Kernel-based Process Isolation": {
+      "Definition": "Using kernel-level capabilities to isolate processes. \n"
+    }
+  },
+  {
+    "Mandatory Access Control": {
+      "Definition": "Controlling access to local computer system resources with kernel-level capabilities. \n",
+      "How it works": " Mandatory access control is a non-discretionary access control system because the rules and polices that determine access is determined by a security control authority and not distributed to local users. Access determinations are based on designed access control polices and are not based on local resource owner determinations. Access is typically granted by defining sets of subjects and sets of objects. Subjects are the entities requesting access and objects are the resources that subjects are trying to access. Rules and policies are defined that associate subjects and object permissions and access controls.  A fine-grained form of mandatory access control is to apply security labels to individual resources, including processes, and the access control decisions are against a particular resource and a given user attempting to gain access. This type of MAC requires that the file system has built-in support for security labels.  Access controls are typically implemented through the use of label identifiers for every file system object. Identifier labels are applied to resources and users are assigned a similar access identifier. Users attempting to access a resource will result in the operating system performing an access control check. The access control check will compare the assigned user's credentials to that of the resource or object they are attempting to access.  A security context is associated with resources and is used to determine assess. Typical basic access control elements include users, roles and types and together they form a security context which is the basis for the security labels. This type of access control is what is employed in SELinux [2]. This form of MAC is considered the most flexible implementation, but it also is the most complex to deploy across the enterprise. Where multiple virtual machines (VM) are run together this type of access control is typically employed to ensure true isolation of processes and VMs. A less fine-grained form of mandatory access control is to apply security labels that allow for access control at the file path level.  Access control is filesystem agnostic and no relabeling of resources is required. Pathname access control usually seems more natural for implementation and corresponding access audits.  This type of MAC is what is employed in AppArmor [3]. AppArmor was developed to provide a simpler alternative MAC method with much less management overhead. A simple access policy is maintained that defines path resource access rules. Access control attributes are typically associated with programs instead of users.",
+      "Considerations": " Some implementations of security label mandatory access control contain complex rules set that are hard to verify and complex to maintain over time. Initial planning of access model and continuous monitoring of the available users, resources and object is necessary.",
+      "Implementations": " \nLinux C-Groups, and policy engines like SELinux and AppArmor\nWindows Mandatory Integrity Control introduced in Windows Vista\n \nImplementation of Mandatory Access Control in Distributed Systems\nSELinux\nAppArmor\n"
+    }
+  },
+  {
+    "System Call Filtering": {
+      "Definition": "Configuring a kernel to use an allow or deny list to filter kernel api calls. \n"
+    }
+  },
+  {
+    "Network Isolation": {
+      "Definition": "Network Isolation techniques prevent network hosts from accessing non-essential system network resources. \n"
+    }
+  },
+  {
+    "Broadcast Domain Isolation": {
+      "Definition": "Broadcast isolation restricts the number of computers a host can contact on their LAN.",
+      "How it works": " Software Defined Networking, or other network encapsulation technologies intercept host broadcast traffic then route it to a specified destination per a configured policy. This can be implemented within hypervisors, networking hardware (WAPs, switches, routers), or virutal hardware.",
+      "Considerations": " This technique is highly dependent on network infrastructure and networking requirements."
+    }
+  },
+  {
+    "DNS Allowlisting": {
+      "Definition": "Permitting only approved domains and their subdomains to be resolved."
+    }
+  },
+  {
+    "DNS Denylisting": {
+      "Definition": "Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type.",
+      "How it works": " Rules are implemented that filter DNS queries using criteria such as:  \nClient subnet\nType of network protocol used in query\nFully qualified domain name (FQDN) of record in the query\nDNS Server IP address that received the DNS request\nType of DNS record being queried\nTime of day the query is received\nSize of the response \n For example, a DNS policy can be created for blocking DNS queries for FQDNs that have been identified as unauthorized.",
+      "Considerations": " \nImplementation considerations for DNS filtering policies to avoid over-blocking or under-blocking domains.\nContinuous maintenance of unauthorized domain lists is needed to keep up to date with possible site content changes.\nFile sharing or content delivery networks may require other filtering techniques that are more fine-grained (URL blocking). \nAccess to malicious websites or other network resources directly by IP instead of by DNS record, or after alteration of local DNS hosts file, may not result in DNS network traffic.\n"
+    }
+  },
+  {
+    "Forward Resolution Domain Denylisting": {
+      "Definition": "Blocking a lookup based on the query's domain name value.",
+      "How it works": " Policies are created that filter DNS queries using fully qualified domain name (FQDN) of record in the query. A DNS policy can be created for blocking DNS queries from FQDNs that have been identified as unauthorized.",
+      "Considerations": " Continuous maintenance of unauthorized domain lists is needed to keep up to date as updates occur."
+    }
+  },
+  {
+    "Hierarchical Domain Denylisting": {
+      "Definition": "Blocking the resolution of any subdomain of a specified domain name.",
+      "How it works": " This technique is used to block DNS queries from related domains and subdomains that are unauthorized.  Hierarchical domain blacklisting considers the blacklisting of second level domains and additional sub-domains and specific hosts for a given query value. A denylist is maintained that contains DNS names and corresponding subdomains, including wildcards, that should be blocked for a given lookup.",
+      "Considerations": " \nThe denylist of domain names will have to be maintained and will need to be kept up to date\nOther domains that resolve to the domain of interest for blocking (CNAME, etc).\nDenylists should have identified maintenance cycles to ensure lists are not stale.\n"
+    }
+  },
+  {
+    "Homoglyph Denylisting": {
+      "Definition": "Blocking DNS queries that are deceptively similar to legitimate domain names.",
+      "How it works": " Homoglyph domain blacklisting considers the domain and subdomain structure of a lookup and compares the named components to blacklisted named components. The blacklisted named components are typically crafted modifications of known good domains, e.g., gooogle.com versus google.com. The blacklisted domains typically resemble trusted domains, but have been altered slightly to deceive users. The blacklisted named components also include consideration for fonts or Unicode characters that can make certain characters appear very similar (zero vs capital O and the letter l vs the number one). The blacklisted domains under certain fonts will appear to be a trusted domain.",
+      "Considerations": " \nMaintaining the currency of the list can be a challenge especially with newly registered domain entries.\nBlacklists should have identified maintenance cycles to ensure lists are not stale.\n"
+    }
+  },
+  {
+    "Forward Resolution IP Denylisting": {
+      "Definition": "Blocking a DNS lookup's answer's IP address value.",
+      "How it works": " This technique prevents a client from learning IP addresses deemed to be potentially malicious, which would have been delivered via forward resolution responses. Responses to forward resolution requests (that is, requests where a domain is sent and IP(s) are returned) are collected, and the IP address(es) included as a response are examined. If the IP address(es) are in a range included in the blacklist, then the response is dropped and not forwarded to the client. The DNS lookup can be blocked by either dropping the network traffic with an inline device, or modifying the value of the response sent by the DNS server. To transparently prevent client applications from hanging on a request, it is common practice to replace malicious values with addresses in the range 127.0.0.0/8 or the address of a honeypot maintained by the network administrators.",
+      "Considerations": " \nThis technique does not prevent the client from contacting the blacklisted IP, only from learning about this IP address via a nameserver lookup request.\nDNS Response traffic can be transmitted over many different protocols, which presents a challenge to implementing methods to extract all DNS answer IP address value(s).\nDNS has historically used UDP port 53, with TCP port 53 instead used for responses over 512 bytes or after a lack of response over UDP.\nUsage of new protocols to provide confidentiality for DNS traffic, such as DoH (DNS over HTTPS) and DoT (DNS over TLS), complicates collection of the IP address(es) in DNS responses. These protocols have often been enabled in browser settings transparently after a browser update, with DNS requests proxied over one of these cryptographic protocols through a specified host.\n\n\nThis technique must be implemented logically between the application that receives the response and the server which sent the response.\nDNS responses sent in an encrypted manner, such as those using DoH or DoT, will require interception of the TLS connections in order to determine the IP address(es) in the response.\n\n\nReplacing the response is not effective in the case that the nameserver uses a technique to provide integrity of its responses, such as DNSSEC for DNS responses.\n"
+    }
+  },
+  {
+    "Reverse Resolution Domain Denylisting": {
+      "Definition": "Blocking a reverse DNS lookup's answer's domain name value.",
+      "How it works": " In reverse resolution requests, the client sends to a nameserver (such as a DNS server) a query of an IP address, to get a response of the associated domain name(s). This technique drops reverse lookup responses where a domain name matches an entry in the blacklist, either verbatim or as a wildcard subdomain of a higher-level domain on the list. Such domain names might be unwanted because Forward Domain Name Resolution requests to such a blacklisted domain might return an unwanted IP address. This technique is useful because relying solely on Forward Resolution Domain Blacklisting will miss instances where the domain in question is forward-resolved in a manner that is not inspected via a subsequent technique (as is likely the case if that resolution is performed with DoH (DNS over HTTPS) or DoT (DNS over TLS)). Additionally, note that responses to forward lookups of that domain are not necessarily equal to the original IP in the reverse lookup request, and that future lookups of a string based on this domain may even employ a less-common name resolution protocol, such as NBNS. The DNS response can either be blocked by dropping the network traffic with an inline device, or by modifying the value of the response sent by the DNS server.  To prevent client applications from hanging on a request, it is common practice to replace malicious values, either with names like \"localhost.\" or the address of a honeypot maintained by the network administrators.",
+      "Considerations": " \nThis technique does not prevent the client from contacting the blacklisted domain or any IP addresses that it might resolve to, only from learning about this domain name via a nameserver lookup.\nDNS response traffic can be transmitted over many different protocols, which presents a challenge to implementing methods to extract all DNS answer domain name value(s).\nDNS has historically used UDP port 53, with TCP port 53 instead used for responses over 512 bytes or after a lack of response over UDP.\nUsage of new protocols to provide confidentiality for DNS traffic, such as DoH (DNS over HTTPS) and DoT (DNS over TLS), complicates collection of the IP address(es) in DNS responses. These protocols have often been enabled in browser settings transparently after a browser update, with DNS requests proxied over one of these cryptographic protocols through a specified host.\n\n\nThis technique must be deployed between the application that receives the response and the server which sent the response.\nDNS responses sent in an encrypted manner, such as using DoH or DoT, will require interception of the TLS connections in order to determine the domain name(s) in the response.\n\n\nReplacing the response is not effective in the case that the nameserver uses a technique to provide integrity of its responses, such as DNSSEC for DNS responses.\n"
+    }
+  },
+  {
+    "Reverse Resolution IP Denylisting": {
+      "Definition": "Blocking a reverse lookup based on the query's IP address value. ",
+      "How it works": " This technique prevents a client from learning domains deemed to be potentially malicious, which would have been delivered via reverse resolution responses over the DNS protocol. Queries for reverse resolution requests (that is, requests where IP(s) are sent and a domain is returned) are collected, and the IP address(es) included in the query are examined. If the IP address(es) are in a range included in the blacklist, then the query is dropped.",
+      "Considerations": " \nThe blacklist will have to be maintained and will need to be kept up to date with identified maintenance cycles to ensure lists are not stale. \nDNS query traffic can be transmitted over many different protocols, which presents a challenge to implementing methods to extract all DNS query IP address value(s). \nDNS has historically used UDP port 53, with TCP port 53 instead used for responses over 512 bytes or after a lack of response over UDP.\nUsage of new protocols to provide confidentiality for DNS traffic, such as DoH (DNS over HTTPS) and DoT (DNS over TLS), complicates collection of the IP address(es) in DNS queries. These protocols have often been enabled in browser settings transparently after a browser update, with DNS queries proxied over one of these cryptographic protocols through a specified host.\n\n\n"
+    }
+  },
+  {
+    "Encrypted Tunnels": {
+      "Definition": "Encrypted encapsulation of routable network traffic. \n"
+    }
+  },
+  {
+    "Inbound Traffic Filtering": {
+      "Definition": "Restricting network traffic originating from untrusted networks destined towards a private host or enclave. \n",
+      "How it works": " Inbound Traffic, in this context, is network traffic originating from an untrusted network towards a private host or enclave. \nFor example: \nAn untrusted network host connecting to a internal commercial portal, shopping.example.com\nAn external mail server connecting to an internal mail server, mail.example.com\n Filtering policies are developed by administrators to meet business requirements and limit connectivity. These policies are implemented on edge devices such as firewalls, routers, and intrusion prevention systems. Examples of filters: \nBlocking incoming traffic from spoofed internally facing IP addresses\nBlocking specific ports and services from establishing connections\nLimiting specific IP ranges from connecting to the network\nDynamic inbound filtering (Hole punching, STUN, NAT-T)\n",
+      "Considerations": " \nBusiness requirements typically drive the development of filtering rulesets\nProtocols using non-standard ports may circumvent filtering technology, which does not detect application protocol based on traffic content\n",
+      "Implementations": " \nOpenWRT (Embedded)\nNetfilter (Linux)\nWindows Firewall\npf(BSD)\n"
+    }
+  },
+  {
+    "Outbound Traffic Filtering": {
+      "Definition": "Restricting network traffic originating from a private host or enclave destined towards untrusted networks. \n",
+      "How it works": " Outbound traffic, in this context, is network traffic originating from a private host or enclave destined towards untrusted networks.\nFor example:  \nAn enterprise desktop intranet user connecting to www.example.com\nAn internal mail server connecting to an external mail server, mail.example.com\n Filtering is commonly implemented as firewall rulesets to limit outbound traffic permitted to egress a host or network. Firewalls are deployed either directly on hosts through kernel level software implementations or installed in-line directly on network links. There are benefits and disadvantages to each approach. There are various strategies for developing filtering rulesets: \nBlock everything by default\nLimit destination hosts\nLimit destination transport or application protocols\nRestrict content outbound (Ex. strings formatted as social security numbers, or proprietary data)\n",
+      "Considerations": " \nDynamic IP assignment creates challenges for Outbound Traffic Filtering because users are not necessarily associated with the same IP address. This can be addressed by linking IP address management information with the filtering logic.\nConnections using non-standard transport layer ports may circumvent outbound traffic filtering technology which does not detect application protocol based on traffic content. \nBusiness requirements typically drive the development of filtering rule sets.\n",
+      "Implementations": " \niptables (Linux)\nWindows Firewall\npf (BSD)\n"
+    }
+  },
+  {
+    "Decoy Environment": {
+      "Definition": "A Decoy Environment comprises hosts and networks for the purposes of deceiving an attacker. \n",
+      "Technique Overview": " Systems in a decoy environment are typically configured so that some detectable means of communication does not have any legitimate business purpose.  Any communication via these means should be logged and analyzed to find potential indicators of compromise for a possible past or future attack against other systems."
+    }
+  },
+  {
+    "Connected Honeynet": {
+      "Definition": "A decoy service, system, or environment, that is connected to the enterprise network, and simulates or emulates certain functionality to the network, without exposing full access to a production system. \n",
+      "How it works": " Decoy honeypots are deployed within the enterprise environment that emulate certain services or portions of an OS to attract attackers.",
+      "Considerations": " A connected honeynet provides a tradeoff between emulating certain functionality but not being as sophisticated as an integrated honeynet. The connected honeynet may not provide enough functionality to detect new attack patterns or zero day exploits but could provide enough functionality for specific known vulnerabilities."
+    }
+  },
+  {
+    "Integrated Honeynet": {
+      "Definition": "The practice of setting decoys in a production environment to entice interaction from attackers. \n",
+      "How it works": " Integrated honeynets use full production environments connected to the enterprise network, that utilize computing resources or software that attract attackers, and allow full interaction and access that provides a complete view of an attack.",
+      "Considerations": " An attacker with control of a system on an Integrated Honeynet could: \ntry to attack other connected hosts on the network, its IP range of internal hosts not properly configured to react to connections from machines on the integrated honeynet, or position behind the firewall.\nexploit its position by eavesdropping on network traffic\nIf an attacker manages to stop the processes used to log an attack without setting off any alarms. [1]\n \nHoneypots for Windows, Roger Grimes, 2005\n"
+    }
+  },
+  {
+    "Standalone Honeynet": {
+      "Definition": "An environment created for the purpose of attracting attackers and eliciting their behaviors that is not connected to any production enterprise systems. \n",
+      "How it works": " A standalone honeynet does not directly interact with the real enterprise environment. It may be located near or in some portion of the enterprise address space, but it does not interact with enterprise resources.",
+      "Considerations": " A standalone honeynet is a lower risk to deploy compared to connected or integrated honeynets due to its isolation from the enterprise network. However, this comes at cost in loss of fidelity and realism. Significant extra effort must be made in order to make the environment look realistic."
+    }
+  },
+  {
+    "Decoy Object": {
+      "Definition": "A Decoy Object is created and deployed for the purposes of deceiving attackers. \n",
+      "Technique Overview": " Decoy objects are typically configured with detectable means of communication but do not have any legitimate business purpose. Any communication via or to these objects should be logged and analyzed to find potential indicators of compromise for a possible past or future attack against other systems."
+    }
+  },
+  {
+    "Decoy File": {
+      "Definition": "A file created for the purposes of deceiving an adversary. \n",
+      "How it works": " The decoy file is made available as a local or network resource. Accesses to the file may be monitored. The files may be configurations, documents, executables, or other file types.",
+      "Considerations": " Properties of the file such as cryptographic checksums, file creation date, file modified date, file size, file owner etc may be modified to improve the credibility of the file.",
+      "Example": " \nA CSV file with decoy user credentials is placed on a system. The system or network is then monitored to detect any accesses to the decoy files.\n"
+    }
+  },
+  {
+    "Decoy Network Resource": {
+      "Definition": "Deploying a network resource for the purposes of deceiving an adversary. \n",
+      "How it works": " Decoy network resources are deployed to web application servers, network file shares, or other network based sharing services. A \"honeypot\" may serve a variety of decoy network resources.",
+      "Considerations": " \nDeveloping a deployment and placement strategy for the decoy network resource.  \nPersonnel responsible for creation of decoy networks should consider the potential for resource exhaustion through denial of service attacks.\n",
+      "Examples": " \nHoneypots are typically used to mimic a known system with fake vulnerabilities. This may attract attackers to the honeypot.\nDecoy accounts are also used to scan for attempted logins. The decoy accounts can provide security analysts with the attacker's potential intents and strategies.\nTarpits are used to monitor unallocated IP space for unauthorized network activity.\n"
+    }
+  },
+  {
+    "Decoy Persona": {
+      "Definition": "Establishing a fake online identity to misdirect, deceive, and or interact with adversaries. \n",
+      "How it works": " A false online identity is created for the purposes of interacting with adversaries in a direct or indirect manner. This includes the associated email addresses, social media accounts, and other online communication profiles.",
+      "Considerations": " \nInclude phone numbers and online social profiles as well as automatically or manually responding to contact made to the persona to improve realism.\nContinuous updating and managing the decoy personas and online activity streams to ensure personas do not become stale and outdated.\n"
+    }
+  },
+  {
+    "Decoy Public Release": {
+      "Definition": "Issuing publicly released media to deceive adversaries. \n",
+      "How it works": " Publicly released media includes press release, videos, or other marketing collateral. The media may include URLs, points of contact, or other identifiers to entice interaction from adversaries.",
+      "Considerations": " \nInformation used in decoy public released media must contain enough realism to deceive and provide interaction from adversaries.\nContinuous development, creation, and distribution of media and identifiers are needed to ensure adversary interaction continues over time.\nDecoy public releases could be placed on platforms with different degrees of ownership, including entirely enterprise-owned infrastructure, IaaS, and SaaS (including social applications). Platforms that are not entirely enterprise-owned may be more likely to gather information\n"
+    }
+  },
+  {
+    "Decoy Session Token": {
+      "Definition": "An authentication token created for the purposes of deceiving an adversary. \n",
+      "How it works": " Usage of decoy session tokens may be monitored to track attacker behavior or otherwise control the beliefs of the attacker.",
+      "Considerations": " \nInteraction and activity with the decoy session token must be constantly monitored and analyzed to detect unauthorized activity.\nSession tokens are typically short-lived and therefore the decoy must be continuously updated to provide the appearance of it being used in the production environment.\nAutomated tools can assist with maintenance and updates by automatically adjusting the decoy session token and environment to mimic the production environment.\n"
+    }
+  },
+  {
+    "Decoy User Credential": {
+      "Definition": "A Credential created for the purpose of deceiving an adversary. \n",
+      "How it works": " A detection analytic is developed to determine when a user uses decoy credentials. Subsequent actions by that user may be monitored or controlled by the defender. A credential may be: \nDomain username and password\nLocal system username and password\n",
+      "Considerations": " \nDecoy credentials should be integrated with a larger decoy environment to ensure that when decoy credentials are compromised, the credentials are used to interact with a decoy asset that is being monitored.\nContinuous maintenance and updates are needed to ensure the legitimacy of the larger decoy environment and specifically the assets that utilize the decoy credentials.\n"
+    }
+  },
+  {
+    "Credential Eviction": {
+      "Definition": "Credential Eviction techniques disable or remove compromised credentials from a computer network. \n"
+    }
+  },
+  {
+    "Account Locking": {
+      "Definition": "The process of temporarily disabling user accounts on a system or domain. \n",
+      "How it works": " Management servers with enterprise policies for account management provide the ability to enable and disable account for given rules. The rules may include specific periods of time (eg. weekend, plant shutdown, leave periods), specific user types or groups, or individual users.",
+      "Considerations": " \nLocal accounts caches vs centralized account management\nSingle Sign-on \nRole based vs Attribute based systems\n",
+      "Examples of account configuration stores": " \nDirectory Services\nActive Directory\nRADIUS\nLDAP\nOracle User Account Management\nJumpCloud\n"
+    }
+  },
+  {
+    "Authentication Cache Invalidation": {
+      "Definition": "Removing tokens or credentials from an authentication cache to prevent further user associated account accesses. \n",
+      "How it works": " Applications can locally cache user authentication credentials for certain server connections. An application may attempt to use the cached credential for a connection. If the cached credentials exist then the user will not be typically prompted for new credentials.",
+      "Considerations": " Are these cached credentials only on the local host? Can they be persisted to the remote server?",
+      "Examples": " Windows Credential Management API"
+    }
+  },
+  {
+    "Process Eviction": {
+      "Definition": "Process eviction techniques terminate or remove running process. \n"
+    }
+  },
+  {
+    "Process Termination": {
+      "Definition": "Terminating a running application process on a computer system. \n",
+      "How it works": " Processes are managed by the operating system kernel.  Different operating system kernels manage the creation and termination of processes in a different manner, and expose this functionality via the kernel API. A running process might be terminated to mitigate its immediate effects if it is exhibiting anomalous, unauthorized, or malicious behavior; such as after detecting anomalous behavior via Administrative Network Activity Analysis, after a failed check from Stack Frame Canary Validation, or after System Call Analysis finds an attempt to execute an unauthorized system call. Security software might use proprietary technology to terminate processes, instead of the system-provided functions.    Further research may provide specific detail on such methods used. In Windows, ExitProcess() is used to send a signal to a process to request it to exit, and TerminateProcess() is used to force a process to exit. The taskkill executable available in the cmd shell is used to kill a process, with the /F switch forcing termination as with TerminateProcess().  In PowerShell, Stop-Process is used, which is aliased by default to spps and kill.  Processes started in the Windows Subsystem for Linux (WSL) environment may be terminated there with the kill command. In Unix-like systems, all process termination requests are handled using signals.  The kill function takes the Process ID and signal to send, and is accessible with the kill command.  Some shells have a kill builtin function which is separate than the kill binary, which can also kill background jobs in the shell and additionally perform the function faster, and can run from an existing instance of the shell if the process table is full.  The signal SIGTERM specifies that the process to terminate may invoke a handler that it has defined instead of terminating, and the signal SIGKILL forces immediate termination. The related command xkill terminates the connection of a program to the X window server, after which the user process may decide to terminate itself; however, termination is not guaranteed as the process, which could be on the same or different host, could then run in a terminal or reconnect to a different X server on any host.  Emacs is such a program that would not terminate itself after its connection to the X server is terminated.",
+      "Considerations": " Terminating a malicious process is not enough to stop an adversary that has already gained persistence in the host via any initial access mechanism, including through that process or another access mechanism. On most operating systems, process termination operations typically occur independently of each other, without functionality provided to atomically terminate multiple processes.  If there are multiple malicious processes which can make system calls to spawn other processes once one of them is closed, user session termination or system restart might be required. Users must have permissions to kill the process.  On Unix-like systems, either root or the process user can kill the process.  On Windows systems, process permissions are managed separately via process security tokens. Processes may have open resource handles, which could leave those resources in an undesired state if the process is forced to terminate.  As such, most operating systems provide a means to send a signal to a process to inform it to gracefully terminate, and on most of these operating systems, it is the typical first step used to terminate a process. As the process may have open resource handles, commonly-used methods of process termination involve sending a signal to the process to terminate.\nOn Windows, the ExitProcess() function is used for this purpose.  Process instructions, as well as a third-party DLL can also cause the process to exit.\nOn Linux, the process is sent a signal on the occurrence of various events: when it loses the console, SIGHUP; when termination is requested, SIGTERM.  The processor then redirects execution to the function registered to handle the signal.   Therefore, sending a signal to the process to ask it to terminate may not always work. On Unix-like systems, sending the SIGKILL signal for a process does not send a message to the process or invoke an implementation-defined handler; instead, it immediately does not allow the process to execute any further processor instructions.   On Windows TerminateProcess() instead of ExitProcess() performs the equivalent. Even still, as the operating system kernel manages the processes, kernel code may block process signals, including those which cannot be trapped, and does in certain circumstances.  Signals are blocked and queued for the duration of the system call when interrupting the system call would result in a kernel invariant being violated, such as when an action results in a malformed data structure; this blocking is common for filesystem requests.  Such system calls can hang when a filesystem has gone offline, leading to a long-term uninterruptible sleep, represented in POSIX command ps output as D state.\nAny malicious system calls or system call handlers are issues of a much larger problem (a kernel-level rootkit) and the system should be redeployed entirely or restored from a backup known to be prior to compromise, and other systems accessible directly and indirectly from that one should also be examined. A process that is truly hung in a system call may prevent the system from shutting down and leave it in an unresponsive state; a hard power off is required. To speed up the action of terminating a process in uninterruptible sleep, the process resource accesses (handles) could be analyzed. On Linux, sync followed by echo 3 > /proc/sys/vm/drop_caches is a safe way to free up some inactive resource handles. The kernel may not allow kernel processes, which are created via methods other than user-space processes, to be terminated. Terminating a shared library can lead to unexpected errors; such shared libraries have their own mechanisms for termination. On Windows, a DLL is unloaded when the reference count of the library reaches 0. After a process has been terminated, it may still take up an entry in the operating system process table until another event occurs. In Windows, a process object is deleted when the last handle to the process is closed. In Linux, a process is removed from the process table when it is reaped by its parent process.  If the parent terminates, historically the parent has been changed to pid 1; however, in the Linux kernel 3.4 and above, processes can set a different process as the subreaper using the prctl() system call. Zombie processes and hung processes could be resolved with a restart of the system. Finally a system restart might be required to kill a process.\nSystems which are only accessible via a remote in-band connection may become inaccessible if a process termination operation that is necessary for reboot does not complete. Processes that are started in a subsystem might not be fully terminated if they are terminated using the command for that subsystem.  For example, in the Windows Subsystem for Linux (WSL), processes started and terminated via WSL calls such as with the kill command in Bash may still have an entry in the Windows process table."
+    }
+  }
+]

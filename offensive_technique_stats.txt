@@ -1,0 +1,1462 @@
+Active Scanning	 --- 	0
+Scanning IP Blocks	 --- 	0
+Vulnerability Scanning	 --- 	0
+Gather Victim Host Information	 --- 	0
+Hardware	 --- 	0
+Software	 --- 	0
+Firmware	 --- 	0
+Client Configurations	 --- 	0
+Gather Victim Identity Information	 --- 	0
+Credentials	 --- 	0
+Email Addresses	 --- 	0
+Employee Names	 --- 	0
+Gather Victim Network Information	 --- 	0
+Domain Properties	 --- 	0
+DNS	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Network Trust Dependencies	 --- 	0
+Network Topology	 --- 	0
+IP Addresses	 --- 	0
+Network Security Appliances	 --- 	0
+Gather Victim Org Information	 --- 	0
+Business Relationships	 --- 	0
+Determine Physical Locations	 --- 	0
+Identify Business Tempo	 --- 	0
+Identify Roles	 --- 	0
+Phishing for Information	 --- 	0
+Spearphishing Service	 --- 	0
+Spearphishing Attachment	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+Spearphishing Link	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	18
+Search Closed Sources	 --- 	0
+Threat Intel Vendors	 --- 	0
+Purchase Technical Data	 --- 	0
+Search Open Technical Databases	 --- 	0
+WHOIS	 --- 	0
+DNS/Passive DNS	 --- 	0
+Digital Certificates	 --- 	0
+CDNs	 --- 	0
+Scan Databases	 --- 	0
+Search Open Websites/Domains	 --- 	0
+Social Media	 --- 	0
+Search Engines	 --- 	0
+Search Victim-Owned Websites	 --- 	0
+Acquire Infrastructure	 --- 	0
+Domains	 --- 	0
+DNS Server	 --- 	0
+Virtual Private Server	 --- 	0
+Server	 --- 	0
+Botnet	 --- 	0
+Web Services	 --- 	0
+Compromise Accounts	 --- 	0
+Social Media Accounts	 --- 	0
+Email Accounts	 --- 	0
+Compromise Infrastructure	 --- 	0
+Domains	 --- 	0
+DNS Server	 --- 	0
+Virtual Private Server	 --- 	0
+Server	 --- 	0
+Botnet	 --- 	0
+Web Services	 --- 	0
+Develop Capabilities	 --- 	0
+Malware	 --- 	0
+Code Signing Certificates	 --- 	0
+Digital Certificates	 --- 	0
+Exploits	 --- 	0
+Establish Accounts	 --- 	0
+Social Media Accounts	 --- 	0
+Email Accounts	 --- 	0
+Obtain Capabilities	 --- 	0
+Malware	 --- 	0
+Tool	 --- 	0
+Code Signing Certificates	 --- 	0
+Digital Certificates	 --- 	0
+Exploits	 --- 	0
+Vulnerabilities	 --- 	0
+Stage Capabilities	 --- 	0
+Upload Malware	 --- 	0
+Upload Tool	 --- 	0
+Install Digital Certificate	 --- 	0
+Drive-by Target	 --- 	0
+Link Target	 --- 	0
+Drive-by Compromise	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Homoglyph Detection, URL Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Exploit Public-Facing Application	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, Database Query String Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	12
+External Remote Services	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Hardware Additions	 --- 	0
+Phishing	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	18
+Spearphishing Attachment	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+Spearphishing Link	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	18
+Spearphishing via Service	 --- 	0
+Replication Through Removable Media	 --- 	0
+Supply Chain Compromise	 --- Software Update, 	1
+Compromise Software Dependencies and Development Tools	 --- Software Update, 	1
+Compromise Software Supply Chain	 --- Software Update, 	1
+Compromise Hardware Supply Chain	 --- 	0
+Trusted Relationship	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Command and Scripting Interpreter	 --- 	0
+PowerShell	 --- 	0
+AppleScript	 --- 	0
+Windows Command Shell	 --- 	0
+Unix Shell	 --- 	0
+Visual Basic	 --- 	0
+Python	 --- 	0
+JavaScript	 --- 	0
+Network Device CLI	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Container Administration Command	 --- 	0
+Deploy Container	 --- 	0
+Exploitation for Client Execution	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, 	6
+Inter-Process Communication	 --- 	0
+Component Object Model	 --- 	0
+Dynamic Data Exchange	 --- 	0
+Native API	 --- 	0
+Scheduled Task/Job	 --- 	0
+At (Windows)	 --- 	0
+Scheduled Task	 --- 	0
+At (Linux)	 --- 	0
+Cron	 --- 	0
+Systemd Timers	 --- 	0
+Container Orchestration Job	 --- 	0
+Shared Modules	 --- 	0
+Software Deployment Tools	 --- 	0
+System Services	 --- 	0
+Launchctl	 --- 	0
+Service Execution	 --- 	0
+User Execution	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Executable Denylisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+Malicious Link	 --- 	0
+Malicious File	 --- 	0
+Malicious Image	 --- 	0
+Windows Management Instrumentation	 --- 	0
+Account Manipulation	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Account Locking, Authentication Cache Invalidation, 	16
+Additional Cloud Credentials	 --- 	0
+Exchange Email Delegate Permissions	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Add Office 365 Global Administrator Role	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+SSH Authorized Keys	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+BITS Jobs	 --- Client-server Payload Profiling, IPC Traffic Analysis, IPC Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	12
+Boot or Logon Autostart Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	7
+Registry Run Keys / Startup Folder	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Authentication Package	 --- 	0
+Time Providers	 --- 	0
+Winlogon Helper DLL	 --- 	0
+Security Support Provider	 --- 	0
+Kernel Modules and Extensions	 --- File Content Rules, File Hashing, Decoy File, 	3
+Re-opened Applications	 --- File Content Rules, File Hashing, Decoy File, 	3
+LSASS Driver	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+Shortcut Modification	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Port Monitors	 --- 	0
+Plist Modification	 --- File Content Rules, File Hashing, Decoy File, 	3
+Print Processors	 --- 	0
+XDG Autostart Entries	 --- 	0
+Active Setup	 --- 	0
+Login Items	 --- 	0
+Boot or Logon Initialization Scripts	 --- Dynamic Analysis, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, Decoy Network Resource, 	9
+Logon Script (Windows)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Logon Script (Mac)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Network Logon Script	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, 	7
+RC Scripts	 --- 	0
+Startup Items	 --- 	0
+Browser Extensions	 --- Software Update, 	1
+Compromise Client Software Binary	 --- Software Update, 	1
+Create Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Account Locking, 	5
+Local Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Account Locking, 	5
+Domain Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Cloud Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Create or Modify System Process	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Launch Agent	 --- File Content Rules, File Hashing, Decoy File, 	3
+Systemd Service	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Windows Service	 --- 	0
+Launch Daemon	 --- File Content Rules, File Hashing, Decoy File, 	3
+Event Triggered Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Session Init Config Analysis, User Session Init Config Analysis, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, User Geolocation Logon Pattern Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, Process Termination, 	28
+Change Default File Association	 --- 	0
+Screensaver	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Windows Management Instrumentation Event Subscription	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Unix Shell Configuration Modification	 --- 	0
+Trap	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+LC_LOAD_DYLIB Addition	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Netsh Helper DLL	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	6
+Accessibility Features	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+AppCert DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+AppInit DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+Application Shimming	 --- Software Update, 	1
+Image File Execution Options Injection	 --- 	0
+PowerShell Profile	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Emond	 --- File Content Rules, File Hashing, Decoy File, 	3
+Component Object Model Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+External Remote Services	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Hijack Execution Flow	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	9
+Services File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Executable Installer File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Services Registry Permissions Weakness	 --- 	0
+Path Interception by Unquoted Path	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by PATH Environment Variable	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by Search Order Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+DLL Search Order Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+DLL Side-Loading	 --- File Content Rules, File Hashing, Decoy File, 	3
+Dynamic Linker Hijacking	 --- 	0
+Dylib Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+COR_PROFILER	 --- File Content Rules, File Hashing, Decoy File, 	3
+Implant Internal Image	 --- 	0
+Modify Authentication Process	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Domain Controller Authentication	 --- Software Update, Service Binary Verification, 	2
+Password Filter DLL	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+Pluggable Authentication Modules	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Network Device Authentication	 --- Software Update, Service Binary Verification, 	2
+Office Application Startup	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	7
+Add-ins	 --- Software Update, 	1
+Office Template Macros	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Outlook Forms	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Decoy File, 	5
+Outlook Rules	 --- 	0
+Outlook Home Page	 --- 	0
+Office Test	 --- 	0
+Pre-OS Boot	 --- Bootloader Authentication, Bootloader Authentication, Software Update, Firmware Verification, 	4
+System Firmware	 --- Software Update, Firmware Verification, 	2
+Component Firmware	 --- Software Update, Firmware Verification, 	2
+Bootkit	 --- Bootloader Authentication, 	1
+ROMMONkit	 --- 	0
+TFTP Boot	 --- 	0
+Scheduled Task/Job	 --- 	0
+At (Windows)	 --- 	0
+Scheduled Task	 --- 	0
+At (Linux)	 --- 	0
+Cron	 --- 	0
+Systemd Timers	 --- 	0
+Container Orchestration Job	 --- 	0
+Server Software Component	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Decoy Network Resource, Process Termination, 	15
+SQL Stored Procedures	 --- Software Update, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Transport Agent	 --- Software Update, Service Binary Verification, Decoy Network Resource, 	3
+Web Shell	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Decoy Network Resource, Process Termination, 	13
+IIS Components	 --- 	0
+Traffic Signaling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Port Knocking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Abuse Elevation Control Mechanism	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	15
+Setuid and Setgid	 --- 	0
+Bypass User Account Control	 --- 	0
+Sudo and Sudo Caching	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Elevated Execution with Prompt	 --- System Call Analysis, 	1
+Access Token Manipulation	 --- System Call Analysis, Decoy Session Token, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	5
+Token Impersonation/Theft	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Create Process with Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Make and Impersonate Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Parent PID Spoofing	 --- System Call Analysis, 	1
+SID-History Injection	 --- 	0
+Boot or Logon Autostart Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	7
+Registry Run Keys / Startup Folder	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Authentication Package	 --- 	0
+Time Providers	 --- 	0
+Winlogon Helper DLL	 --- 	0
+Security Support Provider	 --- 	0
+Kernel Modules and Extensions	 --- File Content Rules, File Hashing, Decoy File, 	3
+Re-opened Applications	 --- File Content Rules, File Hashing, Decoy File, 	3
+LSASS Driver	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+Shortcut Modification	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Port Monitors	 --- 	0
+Plist Modification	 --- File Content Rules, File Hashing, Decoy File, 	3
+Print Processors	 --- 	0
+XDG Autostart Entries	 --- 	0
+Active Setup	 --- 	0
+Login Items	 --- 	0
+Boot or Logon Initialization Scripts	 --- Dynamic Analysis, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, Decoy Network Resource, 	9
+Logon Script (Windows)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Logon Script (Mac)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Network Logon Script	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, 	7
+RC Scripts	 --- 	0
+Startup Items	 --- 	0
+Create or Modify System Process	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Launch Agent	 --- File Content Rules, File Hashing, Decoy File, 	3
+Systemd Service	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Windows Service	 --- 	0
+Launch Daemon	 --- File Content Rules, File Hashing, Decoy File, 	3
+Domain Policy Modification	 --- 	0
+Group Policy Modification	 --- 	0
+Domain Trust Modification	 --- 	0
+Escape to Host	 --- 	0
+Event Triggered Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Session Init Config Analysis, User Session Init Config Analysis, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, User Geolocation Logon Pattern Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, Process Termination, 	28
+Change Default File Association	 --- 	0
+Screensaver	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Windows Management Instrumentation Event Subscription	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Unix Shell Configuration Modification	 --- 	0
+Trap	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+LC_LOAD_DYLIB Addition	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Netsh Helper DLL	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	6
+Accessibility Features	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+AppCert DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+AppInit DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+Application Shimming	 --- Software Update, 	1
+Image File Execution Options Injection	 --- 	0
+PowerShell Profile	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Emond	 --- File Content Rules, File Hashing, Decoy File, 	3
+Component Object Model Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Exploitation for Privilege Escalation	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, 	6
+Hijack Execution Flow	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	9
+Services File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Executable Installer File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Services Registry Permissions Weakness	 --- 	0
+Path Interception by Unquoted Path	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by PATH Environment Variable	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by Search Order Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+DLL Search Order Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+DLL Side-Loading	 --- File Content Rules, File Hashing, Decoy File, 	3
+Dynamic Linker Hijacking	 --- 	0
+Dylib Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+COR_PROFILER	 --- File Content Rules, File Hashing, Decoy File, 	3
+Process Injection	 --- Process Segment Execution Prevention, Process Segment Execution Prevention, Segment Address Offset Randomization, Segment Address Offset Randomization, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Memory Boundary Tracking, Memory Boundary Tracking, System File Analysis, Service Binary Verification, Process Code Segment Verification, Process Code Segment Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Allowlisting, Decoy File, Process Termination, 	24
+Dynamic-link Library Injection	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Portable Executable Injection	 --- File Content Rules, File Hashing, Decoy File, 	3
+Thread Execution Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System Call Analysis, Executable Denylisting, Executable Allowlisting, Decoy File, 	8
+Asynchronous Procedure Call	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Thread Local Storage	 --- System Call Analysis, 	1
+Ptrace System Calls	 --- System Call Analysis, 	1
+Proc Memory	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Extra Window Memory Injection	 --- 	0
+Process Doppelgänging	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Process Hollowing	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+VDSO Hijacking	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Scheduled Task/Job	 --- 	0
+At (Windows)	 --- 	0
+Scheduled Task	 --- 	0
+At (Linux)	 --- 	0
+Cron	 --- 	0
+Systemd Timers	 --- 	0
+Container Orchestration Job	 --- 	0
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Abuse Elevation Control Mechanism	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	15
+Setuid and Setgid	 --- 	0
+Bypass User Account Control	 --- 	0
+Sudo and Sudo Caching	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Elevated Execution with Prompt	 --- System Call Analysis, 	1
+Access Token Manipulation	 --- System Call Analysis, Decoy Session Token, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	5
+Token Impersonation/Theft	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Create Process with Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Make and Impersonate Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Parent PID Spoofing	 --- System Call Analysis, 	1
+SID-History Injection	 --- 	0
+BITS Jobs	 --- Client-server Payload Profiling, IPC Traffic Analysis, IPC Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	12
+Build Image on Host	 --- 	0
+Deobfuscate/Decode Files or Information	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	12
+Deploy Container	 --- 	0
+Direct Volume Access	 --- 	0
+Domain Policy Modification	 --- 	0
+Group Policy Modification	 --- 	0
+Domain Trust Modification	 --- 	0
+Execution Guardrails	 --- 	0
+Environmental Keying	 --- 	0
+Exploitation for Defense Evasion	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, 	6
+File and Directory Permissions Modification	 --- 	0
+Windows File and Directory Permissions Modification	 --- 	0
+Linux and Mac File and Directory Permissions Modification	 --- 	0
+Hide Artifacts	 --- Disk Encryption, Software Update, File Content Rules, File Hashing, Service Binary Verification, User Session Init Config Analysis, Decoy File, 	7
+Hidden Files and Directories	 --- 	0
+Hidden Users	 --- File Content Rules, File Hashing, User Session Init Config Analysis, Decoy File, 	4
+Hidden Window	 --- File Content Rules, File Hashing, Decoy File, 	3
+NTFS File Attributes	 --- 	0
+Hidden File System	 --- Disk Encryption, 	1
+Run Virtual Instance	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+VBA Stomping	 --- 	0
+Email Hiding Rules	 --- 	0
+Resource Forking	 --- 	0
+Hijack Execution Flow	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	9
+Services File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Executable Installer File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Services Registry Permissions Weakness	 --- 	0
+Path Interception by Unquoted Path	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by PATH Environment Variable	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by Search Order Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+DLL Search Order Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+DLL Side-Loading	 --- File Content Rules, File Hashing, Decoy File, 	3
+Dynamic Linker Hijacking	 --- 	0
+Dylib Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+COR_PROFILER	 --- File Content Rules, File Hashing, Decoy File, 	3
+Impair Defenses	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System Daemon Monitoring, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	13
+Disable or Modify Tools	 --- System Daemon Monitoring, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Disable Windows Event Logging	 --- 	0
+Impair Command History Logging	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Disable or Modify System Firewall	 --- 	0
+Indicator Blocking	 --- 	0
+Disable or Modify Cloud Firewall	 --- 	0
+Disable Cloud Logs	 --- 	0
+Safe Mode Boot	 --- 	0
+Downgrade Attack	 --- 	0
+Indicator Removal on Host	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, Decoy Network Resource, 	6
+Clear Windows Event Logs	 --- 	0
+Clear Linux or Mac System Logs	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Clear Command History	 --- 	0
+File Deletion	 --- File Content Rules, File Hashing, Decoy File, 	3
+Network Share Connection Removal	 --- Decoy Network Resource, 	1
+Timestomp	 --- 	0
+Indirect Command Execution	 --- 	0
+Masquerading	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Scheduled Job Analysis, System File Analysis, Service Binary Verification, System Call Analysis, Executable Denylisting, Executable Allowlisting, Decoy File, 	11
+Invalid Code Signature	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Right-to-Left Override	 --- 	0
+Rename System Utilities	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	8
+Masquerade Task or Service	 --- Scheduled Job Analysis, 	1
+Match Legitimate Name or Location	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Space after Filename	 --- File Content Rules, File Hashing, Decoy File, 	3
+Double File Extension	 --- 	0
+Modify Authentication Process	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Domain Controller Authentication	 --- Software Update, Service Binary Verification, 	2
+Password Filter DLL	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+Pluggable Authentication Modules	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Network Device Authentication	 --- Software Update, Service Binary Verification, 	2
+Modify Cloud Compute Infrastructure	 --- 	0
+Create Snapshot	 --- 	0
+Create Cloud Instance	 --- 	0
+Delete Cloud Instance	 --- 	0
+Revert Cloud Instance	 --- 	0
+Modify Registry	 --- 	0
+Modify System Image	 --- 	0
+Patch System Image	 --- 	0
+Downgrade System Image	 --- 	0
+Network Boundary Bridging	 --- 	0
+Network Address Translation Traversal	 --- 	0
+Obfuscated Files or Information	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Binary Padding	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Software Packing	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Steganography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Compile After Delivery	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Indicator Removal from Tools	 --- 	0
+HTML Smuggling	 --- 	0
+Pre-OS Boot	 --- Bootloader Authentication, Bootloader Authentication, Software Update, Firmware Verification, 	4
+System Firmware	 --- Software Update, Firmware Verification, 	2
+Component Firmware	 --- Software Update, Firmware Verification, 	2
+Bootkit	 --- Bootloader Authentication, 	1
+ROMMONkit	 --- 	0
+TFTP Boot	 --- 	0
+Process Injection	 --- Process Segment Execution Prevention, Process Segment Execution Prevention, Segment Address Offset Randomization, Segment Address Offset Randomization, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Memory Boundary Tracking, Memory Boundary Tracking, System File Analysis, Service Binary Verification, Process Code Segment Verification, Process Code Segment Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Allowlisting, Decoy File, Process Termination, 	24
+Dynamic-link Library Injection	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Portable Executable Injection	 --- File Content Rules, File Hashing, Decoy File, 	3
+Thread Execution Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System Call Analysis, Executable Denylisting, Executable Allowlisting, Decoy File, 	8
+Asynchronous Procedure Call	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Thread Local Storage	 --- System Call Analysis, 	1
+Ptrace System Calls	 --- System Call Analysis, 	1
+Proc Memory	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Extra Window Memory Injection	 --- 	0
+Process Doppelgänging	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Process Hollowing	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+VDSO Hijacking	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Reflective Code Loading	 --- 	0
+Rogue Domain Controller	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Rootkit	 --- Software Update, File Content Rules, File Hashing, Firmware Verification, Decoy File, 	5
+Signed Binary Proxy Execution	 --- 	0
+Rundll32	 --- 	0
+Compiled HTML File	 --- 	0
+Control Panel	 --- 	0
+CMSTP	 --- 	0
+InstallUtil	 --- 	0
+Mshta	 --- 	0
+Regsvcs/Regasm	 --- 	0
+Regsvr32	 --- 	0
+Msiexec	 --- 	0
+Odbcconf	 --- 	0
+Verclsid	 --- 	0
+Mavinject	 --- 	0
+MMC	 --- 	0
+Signed Script Proxy Execution	 --- 	0
+PubPrn	 --- 	0
+Subvert Trust Controls	 --- 	0
+Gatekeeper Bypass	 --- 	0
+Code Signing	 --- 	0
+SIP and Trust Provider Hijacking	 --- 	0
+Install Root Certificate	 --- 	0
+Mark-of-the-Web Bypass	 --- 	0
+Code Signing Policy Modification	 --- 	0
+Template Injection	 --- 	0
+Traffic Signaling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Port Knocking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Trusted Developer Utilities Proxy Execution	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+MSBuild	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+Unused/Unsupported Cloud Regions	 --- 	0
+Use Alternate Authentication Material	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	16
+Pass the Hash	 --- 	0
+Pass the Ticket	 --- 	0
+Application Access Token	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	13
+Web Session Cookie	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	12
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Virtualization/Sandbox Evasion	 --- Software Update, System Call Analysis, 	2
+System Checks	 --- 	0
+User Activity Based Checks	 --- 	0
+Time Based Evasion	 --- Software Update, System Call Analysis, 	2
+Weaken Encryption	 --- 	0
+Reduce Key Space	 --- 	0
+Disable Crypto Hardware	 --- 	0
+XSL Script Processing	 --- 	0
+Adversary-in-the-Middle	 --- 	0
+LLMNR/NBT-NS Poisoning and SMB Relay	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+ARP Cache Poisoning	 --- 	0
+Brute Force	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	15
+Password Guessing	 --- Authentication Event Thresholding, Resource Access Pattern Analysis, Session Duration Analysis, 	3
+Password Cracking	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Password Spraying	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Credential Stuffing	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Credentials from Password Stores	 --- 	0
+Keychain	 --- 	0
+Securityd Memory	 --- 	0
+Credentials from Web Browsers	 --- 	0
+Windows Credential Manager	 --- 	0
+Password Managers	 --- 	0
+Exploitation for Credential Access	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Software Update, Memory Boundary Tracking, Service Binary Verification, Process Code Segment Verification, Shadow Stack Comparisons, 	8
+Forced Authentication	 --- File Content Rules, File Hashing, Authentication Event Thresholding, Resource Access Pattern Analysis, Session Duration Analysis, Decoy File, 	6
+Forge Web Credentials	 --- 	0
+Web Cookies	 --- 	0
+SAML Tokens	 --- 	0
+Input Capture	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Software Update, Input Device Analysis, Input Device Analysis, Memory Boundary Tracking, Service Binary Verification, Service Binary Verification, Process Code Segment Verification, 	9
+Keylogging	 --- Input Device Analysis, 	1
+GUI Input Capture	 --- 	0
+Web Portal Capture	 --- Software Update, Service Binary Verification, 	2
+Credential API Hooking	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+Modify Authentication Process	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Domain Controller Authentication	 --- Software Update, Service Binary Verification, 	2
+Password Filter DLL	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+Pluggable Authentication Modules	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Network Device Authentication	 --- Software Update, Service Binary Verification, 	2
+Network Sniffing	 --- DNS Traffic Analysis, DNS Traffic Analysis, 	2
+OS Credential Dumping	 --- Software Update, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, System File Analysis, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, User Geolocation Logon Pattern Analysis, Hardware-based Process Isolation, Mandatory Access Control, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	24
+LSASS Memory	 --- Software Update, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	10
+Security Account Manager	 --- Software Update, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	10
+NTDS	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+DCSync	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	12
+Proc Filesystem	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, Decoy User Credential, Authentication Cache Invalidation, 	7
+/etc/passwd and /etc/shadow	 --- File Content Rules, File Hashing, Decoy File, Decoy User Credential, Authentication Cache Invalidation, 	5
+Cached Domain Credentials	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+LSA Secrets	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	8
+Steal Application Access Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Steal or Forge Kerberos Tickets	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, RPC Traffic Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	12
+Golden Ticket	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Silver Ticket	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Kerberoasting	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, RPC Traffic Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	12
+AS-REP Roasting	 --- 	0
+Steal Web Session Cookie	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Two-Factor Authentication Interception	 --- 	0
+Unsecured Credentials	 --- File Content Rules, File Hashing, Decoy File, Decoy User Credential, Authentication Cache Invalidation, 	5
+Credentials In Files	 --- 	0
+Credentials in Registry	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Bash History	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Private Keys	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Cloud Instance Metadata API	 --- 	0
+Group Policy Preferences	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Container API	 --- 	0
+Account Discovery	 --- 	0
+Local Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Account Locking, 	5
+Domain Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Email Account	 --- 	0
+Cloud Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Application Window Discovery	 --- 	0
+Browser Bookmark Discovery	 --- 	0
+Cloud Infrastructure Discovery	 --- 	0
+Cloud Service Dashboard	 --- 	0
+Cloud Service Discovery	 --- 	0
+Cloud Storage Object Discovery	 --- 	0
+Container and Resource Discovery	 --- 	0
+Domain Trust Discovery	 --- 	0
+File and Directory Discovery	 --- 	0
+Group Policy Discovery	 --- 	0
+Network Service Scanning	 --- 	0
+Network Share Discovery	 --- 	0
+Network Sniffing	 --- DNS Traffic Analysis, DNS Traffic Analysis, 	2
+Password Policy Discovery	 --- 	0
+Peripheral Device Discovery	 --- 	0
+Permission Groups Discovery	 --- 	0
+Domain Groups	 --- 	0
+Cloud Groups	 --- 	0
+Local Groups	 --- 	0
+Process Discovery	 --- 	0
+Query Registry	 --- 	0
+Remote System Discovery	 --- 	0
+Software Discovery	 --- 	0
+Security Software Discovery	 --- 	0
+System Information Discovery	 --- 	0
+System Location Discovery	 --- 	0
+System Language Discovery	 --- 	0
+System Network Configuration Discovery	 --- 	0
+Internet Connection Discovery	 --- 	0
+System Network Connections Discovery	 --- 	0
+System Owner/User Discovery	 --- 	0
+System Service Discovery	 --- 	0
+System Time Discovery	 --- 	0
+Virtualization/Sandbox Evasion	 --- Software Update, System Call Analysis, 	2
+System Checks	 --- 	0
+User Activity Based Checks	 --- 	0
+Time Based Evasion	 --- Software Update, System Call Analysis, 	2
+Exploitation of Remote Services	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	15
+Internal Spearphishing	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Decoy File, 	8
+Lateral Tool Transfer	 --- Client-server Payload Profiling, File Carving, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Remote Service Session Hijacking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+SSH Hijacking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+RDP Hijacking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Remote Services	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Remote Desktop Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+SMB/Windows Admin Shares	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Distributed Component Object Model	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+SSH	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+VNC	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Windows Remote Management	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Replication Through Removable Media	 --- 	0
+Software Deployment Tools	 --- 	0
+Taint Shared Content	 --- Decoy Network Resource, 	1
+Use Alternate Authentication Material	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	16
+Pass the Hash	 --- 	0
+Pass the Ticket	 --- 	0
+Application Access Token	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	13
+Web Session Cookie	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	12
+Adversary-in-the-Middle	 --- 	0
+LLMNR/NBT-NS Poisoning and SMB Relay	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+ARP Cache Poisoning	 --- 	0
+Archive Collected Data	 --- File Content Rules, File Hashing, Decoy File, 	3
+Archive via Utility	 --- File Content Rules, File Hashing, Decoy File, 	3
+Archive via Library	 --- File Content Rules, File Hashing, Decoy File, 	3
+Archive via Custom Method	 --- File Content Rules, File Hashing, Decoy File, 	3
+Audio Capture	 --- Input Device Analysis, 	1
+Automated Collection	 --- File Content Rules, File Hashing, Decoy File, 	3
+Browser Session Hijacking	 --- 	0
+Clipboard Data	 --- 	0
+Data from Cloud Storage Object	 --- 	0
+Data from Configuration Repository	 --- 	0
+SNMP (MIB Dump)	 --- 	0
+Network Device Configuration Dump	 --- 	0
+Data from Information Repositories	 --- Decoy Network Resource, 	1
+Confluence	 --- Decoy Network Resource, 	1
+Sharepoint	 --- Decoy Network Resource, 	1
+Code Repositories	 --- 	0
+Data from Local System	 --- 	0
+Data from Network Shared Drive	 --- Decoy Network Resource, 	1
+Data from Removable Media	 --- 	0
+Data Staged	 --- Decoy Network Resource, 	1
+Local Data Staging	 --- 	0
+Remote Data Staging	 --- Decoy Network Resource, 	1
+Email Collection	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Decoy File, Decoy Network Resource, 	9
+Local Email Collection	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Decoy File, 	8
+Remote Email Collection	 --- Decoy Network Resource, 	1
+Email Forwarding Rule	 --- 	0
+Input Capture	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Software Update, Input Device Analysis, Input Device Analysis, Memory Boundary Tracking, Service Binary Verification, Service Binary Verification, Process Code Segment Verification, 	9
+Keylogging	 --- Input Device Analysis, 	1
+GUI Input Capture	 --- 	0
+Web Portal Capture	 --- Software Update, Service Binary Verification, 	2
+Credential API Hooking	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+Screen Capture	 --- 	0
+Video Capture	 --- Input Device Analysis, 	1
+Application Layer Protocol	 --- Client-server Payload Profiling, DNS Traffic Analysis, File Carving, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	19
+Web Protocols	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+File Transfer Protocols	 --- Client-server Payload Profiling, File Carving, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Mail Protocols	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+DNS	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Communication Through Removable Media	 --- 	0
+Data Encoding	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Standard Encoding	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Non-Standard Encoding	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Data Obfuscation	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Junk Data	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Steganography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Protocol Impersonation	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Dynamic Resolution	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Domain Generation Algorithms	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Fast Flux DNS	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+DNS Calculation	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Encrypted Channel	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Symmetric Cryptography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Asymmetric Cryptography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Fallback Channels	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Ingress Tool Transfer	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Multi-Stage Channels	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Non-Application Layer Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Non-Standard Port	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Protocol Tunneling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Internal Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+External Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Multi-hop Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Domain Fronting	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Remote Access Software	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Traffic Signaling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Port Knocking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Web Service	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Dead Drop Resolver	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Bidirectional Communication	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+One-Way Communication	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Automated Exfiltration	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Traffic Duplication	 --- 	0
+Data Transfer Size Limits	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Exfiltration Over Alternative Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over Symmetric Encrypted Non-C2 Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over Asymmetric Encrypted Non-C2 Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over C2 Channel	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Exfiltration Over Other Network Medium	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Exfiltration Over Bluetooth	 --- 	0
+Exfiltration Over Physical Medium	 --- 	0
+Exfiltration over USB	 --- 	0
+Exfiltration Over Web Service	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration to Code Repository	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration to Cloud Storage	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Scheduled Transfer	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Transfer Data to Cloud Account	 --- 	0
+Account Access Removal	 --- 	0
+Data Destruction	 --- 	0
+Data Encrypted for Impact	 --- 	0
+Data Manipulation	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Executable Denylisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	14
+Stored Data Manipulation	 --- File Content Rules, File Hashing, Decoy File, 	3
+Transmitted Data Manipulation	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Runtime Data Manipulation	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Defacement	 --- Decoy Network Resource, 	1
+Internal Defacement	 --- 	0
+External Defacement	 --- Decoy Network Resource, 	1
+Disk Wipe	 --- 	0
+Disk Content Wipe	 --- 	0
+Disk Structure Wipe	 --- 	0
+Endpoint Denial of Service	 --- 	0
+OS Exhaustion Flood	 --- 	0
+Service Exhaustion Flood	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Application Exhaustion Flood	 --- 	0
+Application or System Exploitation	 --- 	0
+Firmware Corruption	 --- 	0
+Inhibit System Recovery	 --- 	0
+Network Denial of Service	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Direct Network Flood	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Reflection Amplification	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Resource Hijacking	 --- 	0
+Service Stop	 --- 	0
+System Shutdown/Reboot	 --- 	0
+Active Scanning	 --- 	0
+Scanning IP Blocks	 --- 	0
+Vulnerability Scanning	 --- 	0
+Gather Victim Host Information	 --- 	0
+Hardware	 --- 	0
+Software	 --- 	0
+Firmware	 --- 	0
+Client Configurations	 --- 	0
+Gather Victim Identity Information	 --- 	0
+Credentials	 --- 	0
+Email Addresses	 --- 	0
+Employee Names	 --- 	0
+Gather Victim Network Information	 --- 	0
+Domain Properties	 --- 	0
+DNS	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Network Trust Dependencies	 --- 	0
+Network Topology	 --- 	0
+IP Addresses	 --- 	0
+Network Security Appliances	 --- 	0
+Gather Victim Org Information	 --- 	0
+Business Relationships	 --- 	0
+Determine Physical Locations	 --- 	0
+Identify Business Tempo	 --- 	0
+Identify Roles	 --- 	0
+Phishing for Information	 --- 	0
+Spearphishing Service	 --- 	0
+Spearphishing Attachment	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+Spearphishing Link	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	18
+Search Closed Sources	 --- 	0
+Threat Intel Vendors	 --- 	0
+Purchase Technical Data	 --- 	0
+Search Open Technical Databases	 --- 	0
+WHOIS	 --- 	0
+DNS/Passive DNS	 --- 	0
+Digital Certificates	 --- 	0
+CDNs	 --- 	0
+Scan Databases	 --- 	0
+Search Open Websites/Domains	 --- 	0
+Social Media	 --- 	0
+Search Engines	 --- 	0
+Search Victim-Owned Websites	 --- 	0
+Acquire Infrastructure	 --- 	0
+Domains	 --- 	0
+DNS Server	 --- 	0
+Virtual Private Server	 --- 	0
+Server	 --- 	0
+Botnet	 --- 	0
+Web Services	 --- 	0
+Compromise Accounts	 --- 	0
+Social Media Accounts	 --- 	0
+Email Accounts	 --- 	0
+Compromise Infrastructure	 --- 	0
+Domains	 --- 	0
+DNS Server	 --- 	0
+Virtual Private Server	 --- 	0
+Server	 --- 	0
+Botnet	 --- 	0
+Web Services	 --- 	0
+Develop Capabilities	 --- 	0
+Malware	 --- 	0
+Code Signing Certificates	 --- 	0
+Digital Certificates	 --- 	0
+Exploits	 --- 	0
+Establish Accounts	 --- 	0
+Social Media Accounts	 --- 	0
+Email Accounts	 --- 	0
+Obtain Capabilities	 --- 	0
+Malware	 --- 	0
+Tool	 --- 	0
+Code Signing Certificates	 --- 	0
+Digital Certificates	 --- 	0
+Exploits	 --- 	0
+Vulnerabilities	 --- 	0
+Stage Capabilities	 --- 	0
+Upload Malware	 --- 	0
+Upload Tool	 --- 	0
+Install Digital Certificate	 --- 	0
+Drive-by Target	 --- 	0
+Link Target	 --- 	0
+Drive-by Compromise	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Homoglyph Detection, URL Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Exploit Public-Facing Application	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, Database Query String Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	12
+External Remote Services	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Hardware Additions	 --- 	0
+Phishing	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	18
+Spearphishing Attachment	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+Spearphishing Link	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Sender MTA Reputation Analysis, Sender Reputation Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	18
+Spearphishing via Service	 --- 	0
+Replication Through Removable Media	 --- 	0
+Supply Chain Compromise	 --- Software Update, 	1
+Compromise Software Dependencies and Development Tools	 --- Software Update, 	1
+Compromise Software Supply Chain	 --- Software Update, 	1
+Compromise Hardware Supply Chain	 --- 	0
+Trusted Relationship	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Command and Scripting Interpreter	 --- 	0
+PowerShell	 --- 	0
+AppleScript	 --- 	0
+Windows Command Shell	 --- 	0
+Unix Shell	 --- 	0
+Visual Basic	 --- 	0
+Python	 --- 	0
+JavaScript	 --- 	0
+Network Device CLI	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Container Administration Command	 --- 	0
+Deploy Container	 --- 	0
+Exploitation for Client Execution	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, 	6
+Inter-Process Communication	 --- 	0
+Component Object Model	 --- 	0
+Dynamic Data Exchange	 --- 	0
+Native API	 --- 	0
+Scheduled Task/Job	 --- 	0
+At (Windows)	 --- 	0
+Scheduled Task	 --- 	0
+At (Linux)	 --- 	0
+Cron	 --- 	0
+Systemd Timers	 --- 	0
+Container Orchestration Job	 --- 	0
+Shared Modules	 --- 	0
+Software Deployment Tools	 --- 	0
+System Services	 --- 	0
+Launchctl	 --- 	0
+Service Execution	 --- 	0
+User Execution	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, URL Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Executable Denylisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+Malicious Link	 --- 	0
+Malicious File	 --- 	0
+Malicious Image	 --- 	0
+Windows Management Instrumentation	 --- 	0
+Account Manipulation	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Account Locking, Authentication Cache Invalidation, 	16
+Additional Cloud Credentials	 --- 	0
+Exchange Email Delegate Permissions	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Add Office 365 Global Administrator Role	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+SSH Authorized Keys	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+BITS Jobs	 --- Client-server Payload Profiling, IPC Traffic Analysis, IPC Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	12
+Boot or Logon Autostart Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	7
+Registry Run Keys / Startup Folder	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Authentication Package	 --- 	0
+Time Providers	 --- 	0
+Winlogon Helper DLL	 --- 	0
+Security Support Provider	 --- 	0
+Kernel Modules and Extensions	 --- File Content Rules, File Hashing, Decoy File, 	3
+Re-opened Applications	 --- File Content Rules, File Hashing, Decoy File, 	3
+LSASS Driver	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+Shortcut Modification	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Port Monitors	 --- 	0
+Plist Modification	 --- File Content Rules, File Hashing, Decoy File, 	3
+Print Processors	 --- 	0
+XDG Autostart Entries	 --- 	0
+Active Setup	 --- 	0
+Login Items	 --- 	0
+Boot or Logon Initialization Scripts	 --- Dynamic Analysis, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, Decoy Network Resource, 	9
+Logon Script (Windows)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Logon Script (Mac)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Network Logon Script	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, 	7
+RC Scripts	 --- 	0
+Startup Items	 --- 	0
+Browser Extensions	 --- Software Update, 	1
+Compromise Client Software Binary	 --- Software Update, 	1
+Create Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Account Locking, 	5
+Local Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Account Locking, 	5
+Domain Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Cloud Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Create or Modify System Process	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Launch Agent	 --- File Content Rules, File Hashing, Decoy File, 	3
+Systemd Service	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Windows Service	 --- 	0
+Launch Daemon	 --- File Content Rules, File Hashing, Decoy File, 	3
+Event Triggered Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Session Init Config Analysis, User Session Init Config Analysis, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, User Geolocation Logon Pattern Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, Process Termination, 	28
+Change Default File Association	 --- 	0
+Screensaver	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Windows Management Instrumentation Event Subscription	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Unix Shell Configuration Modification	 --- 	0
+Trap	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+LC_LOAD_DYLIB Addition	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Netsh Helper DLL	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	6
+Accessibility Features	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+AppCert DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+AppInit DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+Application Shimming	 --- Software Update, 	1
+Image File Execution Options Injection	 --- 	0
+PowerShell Profile	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Emond	 --- File Content Rules, File Hashing, Decoy File, 	3
+Component Object Model Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+External Remote Services	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Hijack Execution Flow	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	9
+Services File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Executable Installer File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Services Registry Permissions Weakness	 --- 	0
+Path Interception by Unquoted Path	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by PATH Environment Variable	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by Search Order Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+DLL Search Order Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+DLL Side-Loading	 --- File Content Rules, File Hashing, Decoy File, 	3
+Dynamic Linker Hijacking	 --- 	0
+Dylib Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+COR_PROFILER	 --- File Content Rules, File Hashing, Decoy File, 	3
+Implant Internal Image	 --- 	0
+Modify Authentication Process	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Domain Controller Authentication	 --- Software Update, Service Binary Verification, 	2
+Password Filter DLL	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+Pluggable Authentication Modules	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Network Device Authentication	 --- Software Update, Service Binary Verification, 	2
+Office Application Startup	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	7
+Add-ins	 --- Software Update, 	1
+Office Template Macros	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Outlook Forms	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Decoy File, 	5
+Outlook Rules	 --- 	0
+Outlook Home Page	 --- 	0
+Office Test	 --- 	0
+Pre-OS Boot	 --- Bootloader Authentication, Bootloader Authentication, Software Update, Firmware Verification, 	4
+System Firmware	 --- Software Update, Firmware Verification, 	2
+Component Firmware	 --- Software Update, Firmware Verification, 	2
+Bootkit	 --- Bootloader Authentication, 	1
+ROMMONkit	 --- 	0
+TFTP Boot	 --- 	0
+Scheduled Task/Job	 --- 	0
+At (Windows)	 --- 	0
+Scheduled Task	 --- 	0
+At (Linux)	 --- 	0
+Cron	 --- 	0
+Systemd Timers	 --- 	0
+Container Orchestration Job	 --- 	0
+Server Software Component	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Decoy Network Resource, Process Termination, 	15
+SQL Stored Procedures	 --- Software Update, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Transport Agent	 --- Software Update, Service Binary Verification, Decoy Network Resource, 	3
+Web Shell	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Decoy Network Resource, Process Termination, 	13
+IIS Components	 --- 	0
+Traffic Signaling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Port Knocking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Abuse Elevation Control Mechanism	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	15
+Setuid and Setgid	 --- 	0
+Bypass User Account Control	 --- 	0
+Sudo and Sudo Caching	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Elevated Execution with Prompt	 --- System Call Analysis, 	1
+Access Token Manipulation	 --- System Call Analysis, Decoy Session Token, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	5
+Token Impersonation/Theft	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Create Process with Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Make and Impersonate Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Parent PID Spoofing	 --- System Call Analysis, 	1
+SID-History Injection	 --- 	0
+Boot or Logon Autostart Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	7
+Registry Run Keys / Startup Folder	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Authentication Package	 --- 	0
+Time Providers	 --- 	0
+Winlogon Helper DLL	 --- 	0
+Security Support Provider	 --- 	0
+Kernel Modules and Extensions	 --- File Content Rules, File Hashing, Decoy File, 	3
+Re-opened Applications	 --- File Content Rules, File Hashing, Decoy File, 	3
+LSASS Driver	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+Shortcut Modification	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Port Monitors	 --- 	0
+Plist Modification	 --- File Content Rules, File Hashing, Decoy File, 	3
+Print Processors	 --- 	0
+XDG Autostart Entries	 --- 	0
+Active Setup	 --- 	0
+Login Items	 --- 	0
+Boot or Logon Initialization Scripts	 --- Dynamic Analysis, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, Decoy Network Resource, 	9
+Logon Script (Windows)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Logon Script (Mac)	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Network Logon Script	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, Decoy Network Resource, 	7
+RC Scripts	 --- 	0
+Startup Items	 --- 	0
+Create or Modify System Process	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Launch Agent	 --- File Content Rules, File Hashing, Decoy File, 	3
+Systemd Service	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Windows Service	 --- 	0
+Launch Daemon	 --- File Content Rules, File Hashing, Decoy File, 	3
+Domain Policy Modification	 --- 	0
+Group Policy Modification	 --- 	0
+Domain Trust Modification	 --- 	0
+Escape to Host	 --- 	0
+Event Triggered Execution	 --- Software Update, Dynamic Analysis, Emulated File Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Session Init Config Analysis, User Session Init Config Analysis, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, User Geolocation Logon Pattern Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, Process Termination, 	28
+Change Default File Association	 --- 	0
+Screensaver	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Windows Management Instrumentation Event Subscription	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Unix Shell Configuration Modification	 --- 	0
+Trap	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+LC_LOAD_DYLIB Addition	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Netsh Helper DLL	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	6
+Accessibility Features	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Executable Denylisting, Executable Allowlisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	17
+AppCert DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+AppInit DLLs	 --- File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy File, Process Termination, 	9
+Application Shimming	 --- Software Update, 	1
+Image File Execution Options Injection	 --- 	0
+PowerShell Profile	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Emond	 --- File Content Rules, File Hashing, Decoy File, 	3
+Component Object Model Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Exploitation for Privilege Escalation	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, 	6
+Hijack Execution Flow	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	9
+Services File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Executable Installer File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Services Registry Permissions Weakness	 --- 	0
+Path Interception by Unquoted Path	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by PATH Environment Variable	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by Search Order Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+DLL Search Order Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+DLL Side-Loading	 --- File Content Rules, File Hashing, Decoy File, 	3
+Dynamic Linker Hijacking	 --- 	0
+Dylib Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+COR_PROFILER	 --- File Content Rules, File Hashing, Decoy File, 	3
+Process Injection	 --- Process Segment Execution Prevention, Process Segment Execution Prevention, Segment Address Offset Randomization, Segment Address Offset Randomization, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Memory Boundary Tracking, Memory Boundary Tracking, System File Analysis, Service Binary Verification, Process Code Segment Verification, Process Code Segment Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Allowlisting, Decoy File, Process Termination, 	24
+Dynamic-link Library Injection	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Portable Executable Injection	 --- File Content Rules, File Hashing, Decoy File, 	3
+Thread Execution Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System Call Analysis, Executable Denylisting, Executable Allowlisting, Decoy File, 	8
+Asynchronous Procedure Call	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Thread Local Storage	 --- System Call Analysis, 	1
+Ptrace System Calls	 --- System Call Analysis, 	1
+Proc Memory	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Extra Window Memory Injection	 --- 	0
+Process Doppelgänging	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Process Hollowing	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+VDSO Hijacking	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Scheduled Task/Job	 --- 	0
+At (Windows)	 --- 	0
+Scheduled Task	 --- 	0
+At (Linux)	 --- 	0
+Cron	 --- 	0
+Systemd Timers	 --- 	0
+Container Orchestration Job	 --- 	0
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Abuse Elevation Control Mechanism	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	15
+Setuid and Setgid	 --- 	0
+Bypass User Account Control	 --- 	0
+Sudo and Sudo Caching	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Elevated Execution with Prompt	 --- System Call Analysis, 	1
+Access Token Manipulation	 --- System Call Analysis, Decoy Session Token, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	5
+Token Impersonation/Theft	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Create Process with Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Make and Impersonate Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Parent PID Spoofing	 --- System Call Analysis, 	1
+SID-History Injection	 --- 	0
+BITS Jobs	 --- Client-server Payload Profiling, IPC Traffic Analysis, IPC Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	12
+Build Image on Host	 --- 	0
+Deobfuscate/Decode Files or Information	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	12
+Deploy Container	 --- 	0
+Direct Volume Access	 --- 	0
+Domain Policy Modification	 --- 	0
+Group Policy Modification	 --- 	0
+Domain Trust Modification	 --- 	0
+Execution Guardrails	 --- 	0
+Environmental Keying	 --- 	0
+Exploitation for Defense Evasion	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, 	6
+File and Directory Permissions Modification	 --- 	0
+Windows File and Directory Permissions Modification	 --- 	0
+Linux and Mac File and Directory Permissions Modification	 --- 	0
+Hide Artifacts	 --- Disk Encryption, Software Update, File Content Rules, File Hashing, Service Binary Verification, User Session Init Config Analysis, Decoy File, 	7
+Hidden Files and Directories	 --- 	0
+Hidden Users	 --- File Content Rules, File Hashing, User Session Init Config Analysis, Decoy File, 	4
+Hidden Window	 --- File Content Rules, File Hashing, Decoy File, 	3
+NTFS File Attributes	 --- 	0
+Hidden File System	 --- Disk Encryption, 	1
+Run Virtual Instance	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+VBA Stomping	 --- 	0
+Email Hiding Rules	 --- 	0
+Resource Forking	 --- 	0
+Hijack Execution Flow	 --- Software Update, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	9
+Services File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Executable Installer File Permissions Weakness	 --- Software Update, Service Binary Verification, 	2
+Services Registry Permissions Weakness	 --- 	0
+Path Interception by Unquoted Path	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by PATH Environment Variable	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Path Interception by Search Order Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+DLL Search Order Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+DLL Side-Loading	 --- File Content Rules, File Hashing, Decoy File, 	3
+Dynamic Linker Hijacking	 --- 	0
+Dylib Hijacking	 --- File Content Rules, File Hashing, Decoy File, 	3
+COR_PROFILER	 --- File Content Rules, File Hashing, Decoy File, 	3
+Impair Defenses	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System Daemon Monitoring, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Decoy File, Process Termination, 	13
+Disable or Modify Tools	 --- System Daemon Monitoring, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Disable Windows Event Logging	 --- 	0
+Impair Command History Logging	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Disable or Modify System Firewall	 --- 	0
+Indicator Blocking	 --- 	0
+Disable or Modify Cloud Firewall	 --- 	0
+Disable Cloud Logs	 --- 	0
+Safe Mode Boot	 --- 	0
+Downgrade Attack	 --- 	0
+Indicator Removal on Host	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, Decoy Network Resource, 	6
+Clear Windows Event Logs	 --- 	0
+Clear Linux or Mac System Logs	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Clear Command History	 --- 	0
+File Deletion	 --- File Content Rules, File Hashing, Decoy File, 	3
+Network Share Connection Removal	 --- Decoy Network Resource, 	1
+Timestomp	 --- 	0
+Indirect Command Execution	 --- 	0
+Masquerading	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Scheduled Job Analysis, System File Analysis, Service Binary Verification, System Call Analysis, Executable Denylisting, Executable Allowlisting, Decoy File, 	11
+Invalid Code Signature	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Right-to-Left Override	 --- 	0
+Rename System Utilities	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Executable Denylisting, Decoy File, 	8
+Masquerade Task or Service	 --- Scheduled Job Analysis, 	1
+Match Legitimate Name or Location	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Space after Filename	 --- File Content Rules, File Hashing, Decoy File, 	3
+Double File Extension	 --- 	0
+Modify Authentication Process	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Domain Controller Authentication	 --- Software Update, Service Binary Verification, 	2
+Password Filter DLL	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+Pluggable Authentication Modules	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Network Device Authentication	 --- Software Update, Service Binary Verification, 	2
+Modify Cloud Compute Infrastructure	 --- 	0
+Create Snapshot	 --- 	0
+Create Cloud Instance	 --- 	0
+Delete Cloud Instance	 --- 	0
+Revert Cloud Instance	 --- 	0
+Modify Registry	 --- 	0
+Modify System Image	 --- 	0
+Patch System Image	 --- 	0
+Downgrade System Image	 --- 	0
+Network Boundary Bridging	 --- 	0
+Network Address Translation Traversal	 --- 	0
+Obfuscated Files or Information	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Binary Padding	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Executable Allowlisting, Decoy File, 	7
+Software Packing	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Steganography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Compile After Delivery	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Indicator Removal from Tools	 --- 	0
+HTML Smuggling	 --- 	0
+Pre-OS Boot	 --- Bootloader Authentication, Bootloader Authentication, Software Update, Firmware Verification, 	4
+System Firmware	 --- Software Update, Firmware Verification, 	2
+Component Firmware	 --- Software Update, Firmware Verification, 	2
+Bootkit	 --- Bootloader Authentication, 	1
+ROMMONkit	 --- 	0
+TFTP Boot	 --- 	0
+Process Injection	 --- Process Segment Execution Prevention, Process Segment Execution Prevention, Segment Address Offset Randomization, Segment Address Offset Randomization, Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Memory Boundary Tracking, Memory Boundary Tracking, System File Analysis, Service Binary Verification, Process Code Segment Verification, Process Code Segment Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Executable Denylisting, Executable Allowlisting, Decoy File, Process Termination, 	24
+Dynamic-link Library Injection	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Portable Executable Injection	 --- File Content Rules, File Hashing, Decoy File, 	3
+Thread Execution Hijacking	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, System Call Analysis, Executable Denylisting, Executable Allowlisting, Decoy File, 	8
+Asynchronous Procedure Call	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Thread Local Storage	 --- System Call Analysis, 	1
+Ptrace System Calls	 --- System Call Analysis, 	1
+Proc Memory	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	5
+Extra Window Memory Injection	 --- 	0
+Process Doppelgänging	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, System Call Analysis, Hardware-based Process Isolation, Mandatory Access Control, Process Termination, 	7
+Process Hollowing	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+VDSO Hijacking	 --- File Content Rules, File Hashing, System Call Analysis, Decoy File, 	4
+Reflective Code Loading	 --- 	0
+Rogue Domain Controller	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Rootkit	 --- Software Update, File Content Rules, File Hashing, Firmware Verification, Decoy File, 	5
+Signed Binary Proxy Execution	 --- 	0
+Rundll32	 --- 	0
+Compiled HTML File	 --- 	0
+Control Panel	 --- 	0
+CMSTP	 --- 	0
+InstallUtil	 --- 	0
+Mshta	 --- 	0
+Regsvcs/Regasm	 --- 	0
+Regsvr32	 --- 	0
+Msiexec	 --- 	0
+Odbcconf	 --- 	0
+Verclsid	 --- 	0
+Mavinject	 --- 	0
+MMC	 --- 	0
+Signed Script Proxy Execution	 --- 	0
+PubPrn	 --- 	0
+Subvert Trust Controls	 --- 	0
+Gatekeeper Bypass	 --- 	0
+Code Signing	 --- 	0
+SIP and Trust Provider Hijacking	 --- 	0
+Install Root Certificate	 --- 	0
+Mark-of-the-Web Bypass	 --- 	0
+Code Signing Policy Modification	 --- 	0
+Template Injection	 --- 	0
+Traffic Signaling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Port Knocking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Trusted Developer Utilities Proxy Execution	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+MSBuild	 --- Software Update, File Content Rules, File Hashing, Decoy File, 	4
+Unused/Unsupported Cloud Regions	 --- 	0
+Use Alternate Authentication Material	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	16
+Pass the Hash	 --- 	0
+Pass the Ticket	 --- 	0
+Application Access Token	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	13
+Web Session Cookie	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	12
+Valid Accounts	 --- Multi-factor Authentication, Multi-factor Authentication, One-time Password, One-time Password, Strong Password Policy, Strong Password Policy, Local Account Monitoring, Local Account Monitoring, Authentication Event Thresholding, Authentication Event Thresholding, Authorization Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Session Duration Analysis, Account Locking, Account Locking, 	20
+Default Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Domain Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Local Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	10
+Cloud Accounts	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Authentication Event Thresholding, Authorization Event Thresholding, Job Function Access Pattern Analysis, Resource Access Pattern Analysis, Session Duration Analysis, Account Locking, 	9
+Virtualization/Sandbox Evasion	 --- Software Update, System Call Analysis, 	2
+System Checks	 --- 	0
+User Activity Based Checks	 --- 	0
+Time Based Evasion	 --- Software Update, System Call Analysis, 	2
+Weaken Encryption	 --- 	0
+Reduce Key Space	 --- 	0
+Disable Crypto Hardware	 --- 	0
+XSL Script Processing	 --- 	0
+Adversary-in-the-Middle	 --- 	0
+LLMNR/NBT-NS Poisoning and SMB Relay	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+ARP Cache Poisoning	 --- 	0
+Brute Force	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	15
+Password Guessing	 --- Authentication Event Thresholding, Resource Access Pattern Analysis, Session Duration Analysis, 	3
+Password Cracking	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Password Spraying	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Credential Stuffing	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	13
+Credentials from Password Stores	 --- 	0
+Keychain	 --- 	0
+Securityd Memory	 --- 	0
+Credentials from Web Browsers	 --- 	0
+Windows Credential Manager	 --- 	0
+Password Managers	 --- 	0
+Exploitation for Credential Access	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Software Update, Memory Boundary Tracking, Service Binary Verification, Process Code Segment Verification, Shadow Stack Comparisons, 	8
+Forced Authentication	 --- File Content Rules, File Hashing, Authentication Event Thresholding, Resource Access Pattern Analysis, Session Duration Analysis, Decoy File, 	6
+Forge Web Credentials	 --- 	0
+Web Cookies	 --- 	0
+SAML Tokens	 --- 	0
+Input Capture	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Software Update, Input Device Analysis, Input Device Analysis, Memory Boundary Tracking, Service Binary Verification, Service Binary Verification, Process Code Segment Verification, 	9
+Keylogging	 --- Input Device Analysis, 	1
+GUI Input Capture	 --- 	0
+Web Portal Capture	 --- Software Update, Service Binary Verification, 	2
+Credential API Hooking	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+Modify Authentication Process	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Domain Controller Authentication	 --- Software Update, Service Binary Verification, 	2
+Password Filter DLL	 --- Software Update, File Content Rules, File Hashing, Service Binary Verification, Decoy File, 	5
+Pluggable Authentication Modules	 --- Software Update, File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, 	6
+Network Device Authentication	 --- Software Update, Service Binary Verification, 	2
+Network Sniffing	 --- DNS Traffic Analysis, DNS Traffic Analysis, 	2
+OS Credential Dumping	 --- Software Update, File Content Rules, File Hashing, Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, System File Analysis, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, User Geolocation Logon Pattern Analysis, Hardware-based Process Isolation, Mandatory Access Control, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	24
+LSASS Memory	 --- Software Update, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	10
+Security Account Manager	 --- Software Update, Service Binary Verification, Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	10
+NTDS	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+DCSync	 --- Administrative Network Activity Analysis, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	12
+Proc Filesystem	 --- File Content Rules, File Hashing, System File Analysis, Service Binary Verification, Decoy File, Decoy User Credential, Authentication Cache Invalidation, 	7
+/etc/passwd and /etc/shadow	 --- File Content Rules, File Hashing, Decoy File, Decoy User Credential, Authentication Cache Invalidation, 	5
+Cached Domain Credentials	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+LSA Secrets	 --- Process Self-Modification Detection, Process Spawn Analysis, Process Lineage Analysis, Hardware-based Process Isolation, Mandatory Access Control, Decoy User Credential, Authentication Cache Invalidation, Process Termination, 	8
+Steal Application Access Token	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Steal or Forge Kerberos Tickets	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, RPC Traffic Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	12
+Golden Ticket	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Silver Ticket	 --- Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	3
+Kerberoasting	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, RPC Traffic Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	12
+AS-REP Roasting	 --- 	0
+Steal Web Session Cookie	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Two-Factor Authentication Interception	 --- 	0
+Unsecured Credentials	 --- File Content Rules, File Hashing, Decoy File, Decoy User Credential, Authentication Cache Invalidation, 	5
+Credentials In Files	 --- 	0
+Credentials in Registry	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Bash History	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Private Keys	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Cloud Instance Metadata API	 --- 	0
+Group Policy Preferences	 --- Decoy User Credential, Authentication Cache Invalidation, 	2
+Container API	 --- 	0
+Account Discovery	 --- 	0
+Local Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Local Account Monitoring, Account Locking, 	5
+Domain Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Email Account	 --- 	0
+Cloud Account	 --- Multi-factor Authentication, One-time Password, Strong Password Policy, Account Locking, 	4
+Application Window Discovery	 --- 	0
+Browser Bookmark Discovery	 --- 	0
+Cloud Infrastructure Discovery	 --- 	0
+Cloud Service Dashboard	 --- 	0
+Cloud Service Discovery	 --- 	0
+Cloud Storage Object Discovery	 --- 	0
+Container and Resource Discovery	 --- 	0
+Domain Trust Discovery	 --- 	0
+File and Directory Discovery	 --- 	0
+Group Policy Discovery	 --- 	0
+Network Service Scanning	 --- 	0
+Network Share Discovery	 --- 	0
+Network Sniffing	 --- DNS Traffic Analysis, DNS Traffic Analysis, 	2
+Password Policy Discovery	 --- 	0
+Peripheral Device Discovery	 --- 	0
+Permission Groups Discovery	 --- 	0
+Domain Groups	 --- 	0
+Cloud Groups	 --- 	0
+Local Groups	 --- 	0
+Process Discovery	 --- 	0
+Query Registry	 --- 	0
+Remote System Discovery	 --- 	0
+Software Discovery	 --- 	0
+Security Software Discovery	 --- 	0
+System Information Discovery	 --- 	0
+System Location Discovery	 --- 	0
+System Language Discovery	 --- 	0
+System Network Configuration Discovery	 --- 	0
+Internet Connection Discovery	 --- 	0
+System Network Connections Discovery	 --- 	0
+System Owner/User Discovery	 --- 	0
+System Service Discovery	 --- 	0
+System Time Discovery	 --- 	0
+Virtualization/Sandbox Evasion	 --- Software Update, System Call Analysis, 	2
+System Checks	 --- 	0
+User Activity Based Checks	 --- 	0
+Time Based Evasion	 --- Software Update, System Call Analysis, 	2
+Exploitation of Remote Services	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Stack Frame Canary Verification, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Memory Boundary Tracking, Process Code Segment Verification, Shadow Stack Comparisons, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	15
+Internal Spearphishing	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Decoy File, 	8
+Lateral Tool Transfer	 --- Client-server Payload Profiling, File Carving, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Remote Service Session Hijacking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+SSH Hijacking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+RDP Hijacking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Remote Services	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Remote Desktop Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+SMB/Windows Admin Shares	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Distributed Component Object Model	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+SSH	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+VNC	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Windows Remote Management	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Replication Through Removable Media	 --- 	0
+Software Deployment Tools	 --- 	0
+Taint Shared Content	 --- Decoy Network Resource, 	1
+Use Alternate Authentication Material	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, Authentication Event Thresholding, Resource Access Pattern Analysis, User Geolocation Logon Pattern Analysis, Session Duration Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	16
+Pass the Hash	 --- 	0
+Pass the Ticket	 --- 	0
+Application Access Token	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy Session Token, Decoy User Credential, Authentication Cache Invalidation, 	13
+Web Session Cookie	 --- Software Update, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Service Binary Verification, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy User Credential, Authentication Cache Invalidation, 	12
+Adversary-in-the-Middle	 --- 	0
+LLMNR/NBT-NS Poisoning and SMB Relay	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+ARP Cache Poisoning	 --- 	0
+Archive Collected Data	 --- File Content Rules, File Hashing, Decoy File, 	3
+Archive via Utility	 --- File Content Rules, File Hashing, Decoy File, 	3
+Archive via Library	 --- File Content Rules, File Hashing, Decoy File, 	3
+Archive via Custom Method	 --- File Content Rules, File Hashing, Decoy File, 	3
+Audio Capture	 --- Input Device Analysis, 	1
+Automated Collection	 --- File Content Rules, File Hashing, Decoy File, 	3
+Browser Session Hijacking	 --- 	0
+Clipboard Data	 --- 	0
+Data from Cloud Storage Object	 --- 	0
+Data from Configuration Repository	 --- 	0
+SNMP (MIB Dump)	 --- 	0
+Network Device Configuration Dump	 --- 	0
+Data from Information Repositories	 --- Decoy Network Resource, 	1
+Confluence	 --- Decoy Network Resource, 	1
+Sharepoint	 --- Decoy Network Resource, 	1
+Code Repositories	 --- 	0
+Data from Local System	 --- 	0
+Data from Network Shared Drive	 --- Decoy Network Resource, 	1
+Data from Removable Media	 --- 	0
+Data Staged	 --- Decoy Network Resource, 	1
+Local Data Staging	 --- 	0
+Remote Data Staging	 --- Decoy Network Resource, 	1
+Email Collection	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Decoy File, Decoy Network Resource, 	9
+Local Email Collection	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Homoglyph Detection, Sender MTA Reputation Analysis, Sender Reputation Analysis, Decoy File, 	8
+Remote Email Collection	 --- Decoy Network Resource, 	1
+Email Forwarding Rule	 --- 	0
+Input Capture	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Software Update, Input Device Analysis, Input Device Analysis, Memory Boundary Tracking, Service Binary Verification, Service Binary Verification, Process Code Segment Verification, 	9
+Keylogging	 --- Input Device Analysis, 	1
+GUI Input Capture	 --- 	0
+Web Portal Capture	 --- Software Update, Service Binary Verification, 	2
+Credential API Hooking	 --- Process Segment Execution Prevention, Segment Address Offset Randomization, Memory Boundary Tracking, Process Code Segment Verification, 	4
+Screen Capture	 --- 	0
+Video Capture	 --- Input Device Analysis, 	1
+Application Layer Protocol	 --- Client-server Payload Profiling, DNS Traffic Analysis, File Carving, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	19
+Web Protocols	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+File Transfer Protocols	 --- Client-server Payload Profiling, File Carving, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Mail Protocols	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+DNS	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Communication Through Removable Media	 --- 	0
+Data Encoding	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Standard Encoding	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Non-Standard Encoding	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Data Obfuscation	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Junk Data	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Steganography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Protocol Impersonation	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Dynamic Resolution	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Domain Generation Algorithms	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Fast Flux DNS	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+DNS Calculation	 --- Client-server Payload Profiling, DNS Traffic Analysis, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, DNS Allowlisting, DNS Denylisting, Forward Resolution Domain Denylisting, Hierarchical Domain Denylisting, Homoglyph Denylisting, Forward Resolution IP Denylisting, Reverse Resolution Domain Denylisting, Reverse Resolution IP Denylisting, 	18
+Encrypted Channel	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Symmetric Cryptography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Asymmetric Cryptography	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Fallback Channels	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Ingress Tool Transfer	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Multi-Stage Channels	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Non-Application Layer Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Non-Standard Port	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Protocol Tunneling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	10
+Internal Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Connection Attempt Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+External Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Multi-hop Proxy	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Domain Fronting	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Remote Access Software	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Traffic Signaling	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Port Knocking	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Web Service	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Dead Drop Resolver	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Bidirectional Communication	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+One-Way Communication	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Automated Exfiltration	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Traffic Duplication	 --- 	0
+Data Transfer Size Limits	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Exfiltration Over Alternative Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over Symmetric Encrypted Non-C2 Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over Asymmetric Encrypted Non-C2 Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration Over C2 Channel	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Exfiltration Over Other Network Medium	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Exfiltration Over Bluetooth	 --- 	0
+Exfiltration Over Physical Medium	 --- 	0
+Exfiltration over USB	 --- 	0
+Exfiltration Over Web Service	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration to Code Repository	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Exfiltration to Cloud Storage	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Relay Pattern Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Scheduled Transfer	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Transfer Data to Cloud Account	 --- 	0
+Account Access Removal	 --- 	0
+Data Destruction	 --- 	0
+Data Encrypted for Impact	 --- 	0
+Data Manipulation	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Executable Denylisting, Inbound Traffic Filtering, Outbound Traffic Filtering, Decoy File, 	14
+Stored Data Manipulation	 --- File Content Rules, File Hashing, Decoy File, 	3
+Transmitted Data Manipulation	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	8
+Runtime Data Manipulation	 --- Dynamic Analysis, Emulated File Analysis, File Content Rules, File Hashing, Executable Denylisting, Decoy File, 	6
+Defacement	 --- Decoy Network Resource, 	1
+Internal Defacement	 --- 	0
+External Defacement	 --- Decoy Network Resource, 	1
+Disk Wipe	 --- 	0
+Disk Content Wipe	 --- 	0
+Disk Structure Wipe	 --- 	0
+Endpoint Denial of Service	 --- 	0
+OS Exhaustion Flood	 --- 	0
+Service Exhaustion Flood	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Application Exhaustion Flood	 --- 	0
+Application or System Exploitation	 --- 	0
+Firmware Corruption	 --- 	0
+Inhibit System Recovery	 --- 	0
+Network Denial of Service	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Direct Network Flood	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Reflection Amplification	 --- Client-server Payload Profiling, Network Traffic Community Deviation, Per Host Download-Upload Ratio Analysis, Protocol Metadata Anomaly Detection, Remote Terminal Session Detection, Inbound Session Volume Analysis, User Geolocation Logon Pattern Analysis, Inbound Traffic Filtering, Outbound Traffic Filtering, 	9
+Resource Hijacking	 --- 	0
+Service Stop	 --- 	0
+System Shutdown/Reboot	 --- 	0

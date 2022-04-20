@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/defensive_technique_info.csv" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/defensive_technique_info.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/offensive_technique_stats.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/techniques_and_sub_techniques_names.txt" charset="windows-1252" />
+  </component>
+</project>
